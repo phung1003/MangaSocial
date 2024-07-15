@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ServerCell" customModule="MangaSocial" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="216" height="152"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="216" height="152"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AWm-fS-oCJ">
+                        <rect key="frame" x="0.0" y="0.0" width="216" height="139"/>
+                        <color key="tintColor" red="0.050980389119999997" green="0.086274504660000001" blue="0.22745099660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKR-wW-9A8">
+                        <rect key="frame" x="0.0" y="140" width="216" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="AWm-fS-oCJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="N0p-sE-haj"/>
+                <constraint firstAttribute="trailing" secondItem="AWm-fS-oCJ" secondAttribute="trailing" id="WZD-gb-4tx"/>
+                <constraint firstItem="AWm-fS-oCJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="g5K-ze-fVj"/>
+                <constraint firstItem="KKR-wW-9A8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hax-EA-lOe"/>
+                <constraint firstItem="KKR-wW-9A8" firstAttribute="top" secondItem="AWm-fS-oCJ" secondAttribute="bottom" constant="1" id="imo-OZ-Gg9"/>
+                <constraint firstAttribute="trailing" secondItem="KKR-wW-9A8" secondAttribute="trailing" id="jpl-DK-pIv"/>
+                <constraint firstAttribute="bottom" secondItem="AWm-fS-oCJ" secondAttribute="bottom" constant="13" id="sre-ZH-cRA"/>
+            </constraints>
+            <size key="customSize" width="216" height="152"/>
+            <connections>
+                <outlet property="image" destination="AWm-fS-oCJ" id="KhD-ck-3mH"/>
+                <outlet property="label" destination="KKR-wW-9A8" id="1W9-Le-tk5"/>
+            </connections>
+            <point key="canvasLocation" x="88.549618320610676" y="54.929577464788736"/>
+        </collectionViewCell>
+    </objects>
+</document>

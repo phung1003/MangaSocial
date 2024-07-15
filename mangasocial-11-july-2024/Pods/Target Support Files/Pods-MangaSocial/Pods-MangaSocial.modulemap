@@ -1,0 +1,6 @@
+framework module Pods_MangaSocial {
+  umbrella header "Pods-MangaSocial-umbrella.h"
+
+  export *
+  module * { export * }
+}

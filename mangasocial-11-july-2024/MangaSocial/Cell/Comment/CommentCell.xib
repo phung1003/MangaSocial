@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CommentCell" customModule="MangaSocial" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="462" height="331"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="462" height="331"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BR" translatesAutoresizingMaskIntoConstraints="NO" id="Lpr-J0-Yrr">
+                        <rect key="frame" x="5" y="10" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="JwW-Mw-4Ml"/>
+                            <constraint firstAttribute="width" secondItem="Lpr-J0-Yrr" secondAttribute="height" multiplier="1:1" id="vfr-7s-G2I"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaB-Yg-UJz">
+                        <rect key="frame" x="46" y="5" width="406" height="20.333333333333332"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" name="AccentColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1o-Fp-3uh">
+                        <rect key="frame" x="46" y="25.333333333333329" width="416" height="116.99999999999999"/>
+                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        </variation>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white" translatesAutoresizingMaskIntoConstraints="NO" id="ZWK-Ll-9rf">
+                        <rect key="frame" x="5" y="0.0" width="452" height="1"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="IRo-As-dFa"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1-1-2001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qO9-8k-U6c">
+                        <rect key="frame" x="86" y="148.33333333333334" width="43" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        </variation>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAg-7D-dqW">
+                        <rect key="frame" x="46" y="142.33333333333334" width="30" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Reply"/>
+                        <connections>
+                            <action selector="rep" destination="gTV-IL-0wX" eventType="touchDown" id="vZs-KC-9uA"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EX6-f7-7mf">
+                        <rect key="frame" x="139" y="142.33333333333334" width="32" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Delete"/>
+                        <connections>
+                            <action selector="deleteComment" destination="gTV-IL-0wX" eventType="touchDown" id="xSf-sC-Rdm"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WF-WS-SJF">
+                        <rect key="frame" x="427" y="0.66666666666666607" width="30" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Edit"/>
+                        <connections>
+                            <action selector="editComment" destination="gTV-IL-0wX" eventType="touchDown" id="0ep-YR-rAw"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="6WF-WS-SJF" firstAttribute="centerY" secondItem="JaB-Yg-UJz" secondAttribute="centerY" id="258-is-OaA"/>
+                <constraint firstItem="JaB-Yg-UJz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="6Ct-dR-JuE"/>
+                <constraint firstItem="T1o-Fp-3uh" firstAttribute="leading" secondItem="Lpr-J0-Yrr" secondAttribute="trailing" constant="5" id="7G6-P5-636"/>
+                <constraint firstItem="DAg-7D-dqW" firstAttribute="top" secondItem="T1o-Fp-3uh" secondAttribute="bottom" id="8Lo-BH-20a"/>
+                <constraint firstItem="qO9-8k-U6c" firstAttribute="leading" secondItem="DAg-7D-dqW" secondAttribute="trailing" constant="10" id="Asx-sl-Kig"/>
+                <constraint firstItem="Lpr-J0-Yrr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="E4s-eC-76k"/>
+                <constraint firstItem="T1o-Fp-3uh" firstAttribute="top" secondItem="JaB-Yg-UJz" secondAttribute="bottom" id="E9L-OE-7cR"/>
+                <constraint firstItem="EX6-f7-7mf" firstAttribute="leading" secondItem="qO9-8k-U6c" secondAttribute="trailing" constant="10" id="EqV-sT-fZr"/>
+                <constraint firstItem="ZWK-Ll-9rf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FRd-2j-3RL"/>
+                <constraint firstItem="6WF-WS-SJF" firstAttribute="trailing" secondItem="JaB-Yg-UJz" secondAttribute="trailing" constant="5" id="ID3-CJ-BxN"/>
+                <constraint firstItem="qO9-8k-U6c" firstAttribute="centerY" secondItem="DAg-7D-dqW" secondAttribute="centerY" id="Ict-zp-QZH"/>
+                <constraint firstAttribute="trailing" secondItem="6WF-WS-SJF" secondAttribute="trailing" constant="5" id="Ou7-zO-lhA"/>
+                <constraint firstItem="ZWK-Ll-9rf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="QW8-68-D4G"/>
+                <constraint firstAttribute="trailing" secondItem="ZWK-Ll-9rf" secondAttribute="trailing" constant="5" id="SQI-Mc-LId"/>
+                <constraint firstItem="EX6-f7-7mf" firstAttribute="centerY" secondItem="DAg-7D-dqW" secondAttribute="centerY" id="Xpt-Mx-aZJ"/>
+                <constraint firstItem="DAg-7D-dqW" firstAttribute="leading" secondItem="T1o-Fp-3uh" secondAttribute="leading" id="azl-u0-NsP"/>
+                <constraint firstItem="JaB-Yg-UJz" firstAttribute="leading" secondItem="Lpr-J0-Yrr" secondAttribute="trailing" constant="5" id="io0-na-KYb"/>
+                <constraint firstItem="Lpr-J0-Yrr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="rsD-Vi-zsr"/>
+                <constraint firstAttribute="trailing" secondItem="T1o-Fp-3uh" secondAttribute="trailing" id="se5-WL-ePA"/>
+            </constraints>
+            <size key="customSize" width="462" height="331"/>
+            <connections>
+                <outlet property="avatar" destination="Lpr-J0-Yrr" id="Y1E-0O-Y72"/>
+                <outlet property="comment" destination="T1o-Fp-3uh" id="oVR-1c-fIF"/>
+                <outlet property="deleteBtn" destination="EX6-f7-7mf" id="ugZ-4e-fHA"/>
+                <outlet property="editBtn" destination="6WF-WS-SJF" id="jsv-TX-4O5"/>
+                <outlet property="name" destination="JaB-Yg-UJz" id="Le1-9p-9Of"/>
+                <outlet property="time" destination="qO9-8k-U6c" id="cfO-Vv-1C3"/>
+                <outlet property="whiteLine" destination="ZWK-Ll-9rf" id="0r3-CD-ite"/>
+            </connections>
+            <point key="canvasLocation" x="276.3358778625954" y="118.66197183098592"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="BR" width="68" height="48"/>
+        <image name="white" width="1200" height="1200"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

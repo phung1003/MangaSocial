@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="savedCell" customModule="MangaSocial" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="192"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="333" height="192"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 3" translatesAutoresizingMaskIntoConstraints="NO" id="4cM-y9-dz8">
+                        <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="128.66666666666666"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manga name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAw-E6-MYn">
+                        <rect key="frame" x="0.0" y="128.66666666666666" width="116.66666666666667" height="63.333333333333343"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Seg-4N-fsR">
+                        <rect key="frame" x="304" y="5" width="24" height="24"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="close (1)"/>
+                        <connections>
+                            <action selector="onTapDelete:" destination="gTV-IL-0wX" eventType="touchUpInside" id="v6A-Wd-eS1"/>
+                        </connections>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="C5l-lS-CmM">
+                        <rect key="frame" x="116.66666666666667" y="34" width="216.33333333333331" height="158"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="egA-NU-IcM">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="gTV-IL-0wX" id="9XN-cY-wxJ"/>
+                            <outlet property="delegate" destination="gTV-IL-0wX" id="Iup-ic-SFQ"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Seg-4N-fsR" secondAttribute="trailing" constant="5" id="1Ty-kH-uTr"/>
+                <constraint firstItem="MAw-E6-MYn" firstAttribute="width" secondItem="4cM-y9-dz8" secondAttribute="width" id="1a5-AC-1CQ"/>
+                <constraint firstItem="C5l-lS-CmM" firstAttribute="top" secondItem="Seg-4N-fsR" secondAttribute="bottom" constant="5" id="29D-GD-v9H"/>
+                <constraint firstAttribute="bottom" secondItem="C5l-lS-CmM" secondAttribute="bottom" id="7tj-tG-fTN"/>
+                <constraint firstItem="MAw-E6-MYn" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.33" id="GSB-ba-jQ8"/>
+                <constraint firstItem="4cM-y9-dz8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KaH-op-0Bj"/>
+                <constraint firstItem="Seg-4N-fsR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="MVm-4o-HKP"/>
+                <constraint firstAttribute="trailing" secondItem="C5l-lS-CmM" secondAttribute="trailing" id="OKv-6x-yt9"/>
+                <constraint firstItem="C5l-lS-CmM" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.65" id="Q3B-sT-lbS"/>
+                <constraint firstItem="4cM-y9-dz8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UlK-V2-B7z"/>
+                <constraint firstAttribute="bottom" secondItem="MAw-E6-MYn" secondAttribute="bottom" id="VKT-cc-nTG"/>
+                <constraint firstItem="MAw-E6-MYn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eZ3-MC-h1l"/>
+                <constraint firstItem="4cM-y9-dz8" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.67" id="gM1-PH-wrN"/>
+                <constraint firstItem="4cM-y9-dz8" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.35" id="zeY-gY-94y"/>
+            </constraints>
+            <size key="customSize" width="333" height="192"/>
+            <connections>
+                <outlet property="chapterCLV" destination="C5l-lS-CmM" id="QTq-A3-YqA"/>
+                <outlet property="imageView" destination="4cM-y9-dz8" id="shi-gA-OIg"/>
+                <outlet property="mangaName" destination="MAw-E6-MYn" id="Jwt-wo-uQF"/>
+            </connections>
+            <point key="canvasLocation" x="255.72519083969465" y="69.718309859154928"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="close (1)" width="24" height="24"/>
+        <image name="image 3" width="141" height="96"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

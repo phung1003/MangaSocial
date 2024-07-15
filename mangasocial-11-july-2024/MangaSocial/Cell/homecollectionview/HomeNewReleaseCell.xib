@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" userLabel="HomeNewReleaseCell" customClass="HomeNewReleaseCell" customModule="MangaSocial" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="563" height="345"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="563" height="345"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-WK-yQY">
+                        <rect key="frame" x="0.0" y="41" width="563" height="304"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jaw-Ok-T4e">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="gTV-IL-0wX" id="wyn-IC-7IV"/>
+                            <outlet property="delegate" destination="gTV-IL-0wX" id="LVq-P9-ter"/>
+                        </connections>
+                    </collectionView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 39" translatesAutoresizingMaskIntoConstraints="NO" id="lMO-fY-Hsy">
+                        <rect key="frame" x="5" y="5" width="70" height="7"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="LJV-qf-1z0"/>
+                            <constraint firstAttribute="height" constant="7" id="bVV-gC-Btj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Release Manga" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-iA-CPh">
+                        <rect key="frame" x="5" y="14" width="137.66666666666666" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cy3-WK-yQY" secondAttribute="bottom" id="0Sv-g9-3CC"/>
+                <constraint firstItem="lMO-fY-Hsy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Jer-NY-1tr"/>
+                <constraint firstAttribute="trailing" secondItem="cy3-WK-yQY" secondAttribute="trailing" id="OQ1-vm-Kh5"/>
+                <constraint firstItem="lMO-fY-Hsy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="QHB-yL-N4b"/>
+                <constraint firstItem="lMO-fY-Hsy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="U9e-6a-fLl"/>
+                <constraint firstItem="Drj-iA-CPh" firstAttribute="top" secondItem="lMO-fY-Hsy" secondAttribute="bottom" constant="2" id="VOz-i8-zc6"/>
+                <constraint firstItem="cy3-WK-yQY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Wm1-Xr-ixi"/>
+                <constraint firstItem="Drj-iA-CPh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Yy4-Gn-FaA"/>
+                <constraint firstItem="lMO-fY-Hsy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="mw5-sx-7Sy"/>
+                <constraint firstItem="cy3-WK-yQY" firstAttribute="top" secondItem="Drj-iA-CPh" secondAttribute="bottom" constant="10" id="nuP-EI-a9r"/>
+            </constraints>
+            <size key="customSize" width="563" height="345"/>
+            <connections>
+                <outlet property="homeCLV" destination="cy3-WK-yQY" id="yX2-AW-fdi"/>
+            </connections>
+            <point key="canvasLocation" x="518.32061068702285" y="92.605633802816911"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Rectangle 39" width="70" height="7"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

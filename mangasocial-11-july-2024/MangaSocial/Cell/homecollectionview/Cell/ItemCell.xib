@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ItemCell" customModule="MangaSocial" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="119" height="227"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="119" height="227"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E41-Jw-XfD">
+                        <rect key="frame" x="0.0" y="0.0" width="119" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="Pwa-bB-dnF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAR-Tb-sxH">
+                        <rect key="frame" x="0.0" y="155" width="119" height="15"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBm-1q-EEK">
+                        <rect key="frame" x="0.0" y="175" width="119" height="14"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJG-3s-MeL">
+                        <rect key="frame" x="14" y="193" width="30" height="13.333333333333343"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Star 3" translatesAutoresizingMaskIntoConstraints="NO" id="3fH-8M-Qgw">
+                        <rect key="frame" x="0.0" y="194" width="12" height="11"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy7-We-vZq">
+                        <rect key="frame" x="0.0" y="214.33333333333334" width="119" height="14"/>
+                        <color key="backgroundColor" red="0.2901961207" green="0.2901961207" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SJG-3s-MeL" secondAttribute="trailing" id="3y6-aV-Nid"/>
+                <constraint firstItem="SJG-3s-MeL" firstAttribute="leading" secondItem="3fH-8M-Qgw" secondAttribute="trailing" constant="2" id="CSt-qr-8d5"/>
+                <constraint firstItem="VAR-Tb-sxH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FIq-1j-cbc"/>
+                <constraint firstItem="SJG-3s-MeL" firstAttribute="centerY" secondItem="3fH-8M-Qgw" secondAttribute="centerY" id="HmZ-7a-ydS"/>
+                <constraint firstAttribute="trailing" secondItem="E41-Jw-XfD" secondAttribute="trailing" id="KQE-Ew-uhF"/>
+                <constraint firstItem="GBm-1q-EEK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Npt-W5-G79"/>
+                <constraint firstAttribute="trailing" secondItem="GBm-1q-EEK" secondAttribute="trailing" id="SMV-8z-DQg"/>
+                <constraint firstItem="E41-Jw-XfD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Vjo-W3-nSm"/>
+                <constraint firstItem="iy7-We-vZq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YJP-oZ-0pg"/>
+                <constraint firstItem="3fH-8M-Qgw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YWg-4P-cSi"/>
+                <constraint firstItem="E41-Jw-XfD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gHb-sD-LIz"/>
+                <constraint firstItem="VAR-Tb-sxH" firstAttribute="top" secondItem="E41-Jw-XfD" secondAttribute="bottom" constant="5" id="gS9-a9-JTU"/>
+                <constraint firstAttribute="trailing" secondItem="iy7-We-vZq" secondAttribute="trailing" id="nBX-GT-QLq"/>
+                <constraint firstItem="GBm-1q-EEK" firstAttribute="top" secondItem="VAR-Tb-sxH" secondAttribute="bottom" constant="5" id="rtp-si-qPw"/>
+                <constraint firstAttribute="trailing" secondItem="VAR-Tb-sxH" secondAttribute="trailing" id="vmu-Tt-Vhi"/>
+                <constraint firstItem="3fH-8M-Qgw" firstAttribute="top" secondItem="GBm-1q-EEK" secondAttribute="bottom" constant="5" id="yGi-xZ-lV9"/>
+                <constraint firstItem="iy7-We-vZq" firstAttribute="top" secondItem="SJG-3s-MeL" secondAttribute="bottom" constant="8" id="zhd-wZ-TRC"/>
+            </constraints>
+            <size key="customSize" width="119" height="227"/>
+            <connections>
+                <outlet property="chapter" destination="GBm-1q-EEK" id="MUO-0R-zhh"/>
+                <outlet property="image" destination="E41-Jw-XfD" id="L8e-j3-jIR"/>
+                <outlet property="name" destination="VAR-Tb-sxH" id="iGy-hl-CXi"/>
+                <outlet property="rate" destination="SJG-3s-MeL" id="X1k-wy-g1G"/>
+                <outlet property="releaseDate" destination="iy7-We-vZq" id="whs-YS-gnx"/>
+            </connections>
+            <point key="canvasLocation" x="67.938931297709928" y="112.32394366197184"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Star 3" width="12" height="11"/>
+    </resources>
+</document>
