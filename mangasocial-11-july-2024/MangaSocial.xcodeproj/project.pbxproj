@@ -82,6 +82,11 @@
 		B720F7982B524BED0043442A /* homeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B720F7532B524BED0043442A /* homeCell.xib */; };
 		B720F79B2B524BF90043442A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B720F7992B524BF90043442A /* LaunchScreen.storyboard */; };
 		B720F79C2B524BF90043442A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B720F79A2B524BF90043442A /* Main.storyboard */; };
+		B73BF6872C465F8D00F2D084 /* BitCollections in Frameworks */ = {isa = PBXBuildFile; productRef = B73BF6862C465F8D00F2D084 /* BitCollections */; };
+		B73BF6892C465F8D00F2D084 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = B73BF6882C465F8D00F2D084 /* Collections */; };
+		B73BF68B2C465F8D00F2D084 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = B73BF68A2C465F8D00F2D084 /* DequeModule */; };
+		B73BF68D2C465F8D00F2D084 /* HashTreeCollections in Frameworks */ = {isa = PBXBuildFile; productRef = B73BF68C2C465F8D00F2D084 /* HashTreeCollections */; };
+		B73BF68F2C465F8D00F2D084 /* HeapModule in Frameworks */ = {isa = PBXBuildFile; productRef = B73BF68E2C465F8D00F2D084 /* HeapModule */; };
 		B74D51DF2B5D077900FD0130 /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74D51DD2B5D077900FD0130 /* ServerCell.swift */; };
 		B74D51E02B5D077A00FD0130 /* ServerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B74D51DE2B5D077900FD0130 /* ServerCell.xib */; };
 		B753F1552B95A15C00A8CCC7 /* ProfileMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B753F1542B95A15C00A8CCC7 /* ProfileMenuVC.swift */; };
@@ -231,6 +236,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B73BF68D2C465F8D00F2D084 /* HashTreeCollections in Frameworks */,
+				B73BF6892C465F8D00F2D084 /* Collections in Frameworks */,
+				B73BF68B2C465F8D00F2D084 /* DequeModule in Frameworks */,
+				B73BF6872C465F8D00F2D084 /* BitCollections in Frameworks */,
+				B73BF68F2C465F8D00F2D084 /* HeapModule in Frameworks */,
 				E1DBC0DDAAF5297ED4DEBE48 /* Pods_MangaSocial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +477,13 @@
 			dependencies = (
 			);
 			name = MangaSocial;
+			packageProductDependencies = (
+				B73BF6862C465F8D00F2D084 /* BitCollections */,
+				B73BF6882C465F8D00F2D084 /* Collections */,
+				B73BF68A2C465F8D00F2D084 /* DequeModule */,
+				B73BF68C2C465F8D00F2D084 /* HashTreeCollections */,
+				B73BF68E2C465F8D00F2D084 /* HeapModule */,
+			);
 			productName = MangaSocial;
 			productReference = B720F6F32B524BC00043442A /* MangaSocial.app */;
 			productType = "com.apple.product-type.application";
@@ -495,6 +512,9 @@
 				Base,
 			);
 			mainGroup = B720F6EA2B524BC00043442A;
+			packageReferences = (
+				B73BF6852C465F8D00F2D084 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = B720F6F42B524BC00043442A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -886,6 +906,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B73BF6852C465F8D00F2D084 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B73BF6862C465F8D00F2D084 /* BitCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B73BF6852C465F8D00F2D084 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = BitCollections;
+		};
+		B73BF6882C465F8D00F2D084 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B73BF6852C465F8D00F2D084 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		B73BF68A2C465F8D00F2D084 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B73BF6852C465F8D00F2D084 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		B73BF68C2C465F8D00F2D084 /* HashTreeCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B73BF6852C465F8D00F2D084 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HashTreeCollections;
+		};
+		B73BF68E2C465F8D00F2D084 /* HeapModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B73BF6852C465F8D00F2D084 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HeapModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B720F6EB2B524BC00043442A /* Project object */;
 }
