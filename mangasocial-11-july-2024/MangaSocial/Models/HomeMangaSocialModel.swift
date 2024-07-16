@@ -23,22 +23,33 @@ class itemMangaModel : NSObject{
         
         if let temp = json["chapter_new"] as? String { chapter_new = temp}
         else if let temp = json["chapter_title"] as? String {chapter_new = temp}
+        else if let temp = json["title_chapter"] as? String {chapter_new = temp}
         
         if let temp = json["image_poster_link_goc"] as? String { image_poster_link_goc = temp}
         else if let temp = json["manga_poster"] as? String {image_poster_link_goc = temp}
+        else if let temp = json["poster_novel"] as? String {image_poster_link_goc = temp}
+
         
         if let temp = json["rate"] as? String { rate = temp}
         
         if let temp = json["time_release"] as? String { time_release = temp }
+        else if let temp = json["time_update"] as? String {time_release = temp}
+
         
         if let temp = json["title_manga"] as? String { title_manga = temp }
         else if let temp = json["manga_title"] as? String {title_manga = temp}
+        else if let temp = json["title_novel"] as? String {title_manga = temp}
+
 
         if let temp = json["url_chapter"] as? String { url_chapter = temp}
         else if let temp = json["chapter_link_server"] as? String {url_chapter = temp}
+        else if let temp = json["link_server_chapter"] as? String {url_chapter = temp}
+
 
         if let temp = json["url_manga"] as? String { url_manga = temp}
         else if let temp = json["manga_link_server"] as? String {url_manga = temp}
+        else if let temp = json["link_server_novel"] as? String {url_manga = temp}
+
 
         if let temp = json["author"] as? String { author = temp}
         return self

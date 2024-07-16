@@ -25,15 +25,22 @@ class DetailManga: NSObject{
         
         if let temp = json["author"] as? String { author = temp}
         if let temp = json["categories"] as? String { genre_manga = temp}
+        else if let temp = json["catergories"] as? String { genre_manga = temp}
         if let temp = json["poster"] as? String {
             poster_manga = temp
         }
     
         if let temp = json["id_manga"] as? String {id_manga = temp}
+        else if let temp = json["id_novel"] as? String {id_manga = temp}
+
+        
         if let temp = json["rate"] as? String { rate = temp}
         if let temp = json["status"] as? String { status_manga = temp}
         if let temp = json["description"] as? String { summary_manga = temp}
+        
         if let temp = json["title"] as? String { title_manga = temp}
+        else if let temp = json["title_novel"] as? String { title_manga = temp}
+
         if let temp = json["views"] as? String { views = temp}
         if let temp = json["chapters"] as? [String: String] {
                    for (key, value) in temp {

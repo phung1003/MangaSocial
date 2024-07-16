@@ -584,7 +584,7 @@
                                 <rect key="frame" x="40" y="203" width="350" height="551"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BVq-2a-sK6">
-                                        <rect key="frame" x="9" y="15.999999999999996" width="332" height="519"/>
+                                        <rect key="frame" x="9" y="16" width="332" height="519"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="l6N-Xr-vZb">
                                             <size key="itemSize" width="128" height="128"/>
@@ -2054,26 +2054,26 @@
             <objects>
                 <viewController storyboardIdentifier="hisAbookVC" id="kT2-oB-hQY" customClass="hisAbookVC" customModule="MangaSocial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aYt-w6-gBd">
-                        <rect key="frame" x="0.0" y="0.0" width="280" height="362"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="anT-G7-pYT">
                                 <rect key="frame" x="18" y="20" width="11" height="11"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-a7-leR">
-                                <rect key="frame" x="252" y="16" width="11" height="11"/>
+                                <rect key="frame" x="362" y="16" width="11" height="11"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="OT6-gs-WQc">
-                                <rect key="frame" x="0.0" y="125.66666666666669" width="11" height="11"/>
+                                <rect key="frame" x="0.0" y="288" width="11" height="11"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="F6n-c0-uaR">
-                                <rect key="frame" x="0.0" y="261" width="11" height="11"/>
+                                <rect key="frame" x="0.0" y="586" width="11" height="11"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="LuA-7S-hhy">
-                                <rect key="frame" x="269" y="125.66666666666669" width="11" height="11"/>
+                                <rect key="frame" x="379" y="288" width="11" height="11"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tIh-fc-QVO">
-                                <rect key="frame" x="18" y="37" width="245" height="325"/>
+                                <rect key="frame" x="18" y="37" width="355" height="650"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kJl-xp-Gg3">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -2082,7 +2082,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gGb-4Y-zfS">
-                                        <rect key="frame" x="58.666666666666664" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hr7-Kj-nj3">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -2096,7 +2096,7 @@
                                 </connections>
                             </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="St9-O8-cqD">
-                                <rect key="frame" x="269" y="261" width="11" height="11"/>
+                                <rect key="frame" x="379" y="586" width="11" height="11"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZwY-DL-0Al"/>
@@ -2144,7 +2144,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NZY-Kr-Egx"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                         <variation key="heightClass=regular-widthClass=regular">

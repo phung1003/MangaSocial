@@ -11,7 +11,7 @@ class NovelModel: NSObject {
  
     func initLoad(_ json: [String:Any]) -> NovelModel {
         if let temp = json["content"] as? String { content = temp}
-
+        else if let temp = json["content_chapter"] as? String { content = temp}
         return self
     }
 }
