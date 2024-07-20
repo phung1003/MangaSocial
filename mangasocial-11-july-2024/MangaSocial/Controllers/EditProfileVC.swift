@@ -27,7 +27,7 @@ class EditProfileVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, 
     
     let attribute:[NSAttributedString.Key: Any] = [
         .font: UIFont.systemFont(ofSize: 14),  // Set the font
-        .foregroundColor: UIColor.black,             // Set the text color
+        .foregroundColor: UIColor.white,             // Set the text color
     ]
 
     override func viewDidLoad() {
@@ -51,8 +51,8 @@ class EditProfileVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, 
     
     override func viewDidAppear(_ animated: Bool) {
         
-        username.bottomBorder(color: UIColor.black.cgColor)
-        job.bottomBorder(color: UIColor.black.cgColor)
+        username.bottomBorder(color: UIColor.white.cgColor)
+        job.bottomBorder(color: UIColor.white.cgColor)
     }
     
     @objc func endEdit() {
@@ -111,9 +111,9 @@ class EditProfileVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, 
     
     func setGradientBackground() {
 
-        let colorTop =  UIColor(red: 0.953, green: 0.639, blue: 0.016, alpha: 1).cgColor
-        let colorMid = UIColor(red: 0.946, green: 0.789, blue: 0.478, alpha: 1).cgColor
-        let colorBottom = UIColor(red: 0.953, green: 0.639, blue: 0.016, alpha: 0.68).cgColor
+        let colorTop =  UIColor(red: 0 , green: 0, blue: 0, alpha: 1).cgColor
+        let colorMid = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        let colorBottom = UIColor(red: 0, green: 0, blue: 0, alpha: 0.68).cgColor
                     
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorMid,colorBottom]
@@ -128,7 +128,7 @@ class EditProfileVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, 
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.bottomBorder(color: UIColor.black.cgColor)
+        textField.bottomBorder(color: UIColor.white.cgColor)
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -136,7 +136,7 @@ class EditProfileVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, 
     }
    
     func textViewDidEndEditing(_ textView: UITextView) {
-        line.backgroundColor = .black
+        line.backgroundColor = .white
 
     }
     

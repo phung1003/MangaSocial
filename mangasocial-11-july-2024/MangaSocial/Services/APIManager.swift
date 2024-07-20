@@ -235,6 +235,7 @@ class APIService:NSObject {
         
         requestSON(url, param: nil, method: .GET, loading: true, value: "") { (data, error) in
             var homeMainReturn = HomeMangaSocialModel()
+            print(data)
             if let data2 = data as? [[String: Any]] {
                 homeMainReturn = homeMainReturn.initLoad(data2)
                 closure(homeMainReturn, error)

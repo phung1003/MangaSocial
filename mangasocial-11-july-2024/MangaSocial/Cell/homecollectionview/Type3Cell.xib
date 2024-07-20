@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="Type3Cell" customModule="MangaSocial" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="449" height="52"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="449" height="52"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2g-IP-JZV">
+                        <rect key="frame" x="15" y="5" width="419" height="25"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                        <color key="textColor" red="0.94901961089999998" green="0.94901961089999998" blue="0.94901961089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Chapter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDR-6u-mSF">
+                        <rect key="frame" x="15" y="22" width="362.33333333333331" height="25"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pY1-XH-zHG">
+                        <rect key="frame" x="402.33333333333331" y="22" width="31.666666666666686" height="25"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="s2g-IP-JZV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="0se-O2-Et7"/>
+                <constraint firstItem="pY1-XH-zHG" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.48" id="FtF-M6-jxy"/>
+                <constraint firstAttribute="bottom" secondItem="pY1-XH-zHG" secondAttribute="bottom" constant="5" id="KAD-UH-yEf"/>
+                <constraint firstItem="pY1-XH-zHG" firstAttribute="leading" secondItem="PDR-6u-mSF" secondAttribute="trailing" constant="25" id="MAP-m2-dg9"/>
+                <constraint firstItem="s2g-IP-JZV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="MC6-yh-7av"/>
+                <constraint firstItem="s2g-IP-JZV" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.48" id="Oqn-gG-gtN"/>
+                <constraint firstItem="PDR-6u-mSF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="amQ-2v-6DJ"/>
+                <constraint firstAttribute="bottom" secondItem="PDR-6u-mSF" secondAttribute="bottom" constant="5" id="b5k-8X-4jb"/>
+                <constraint firstItem="PDR-6u-mSF" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.48" id="dRd-ui-zZV"/>
+                <constraint firstAttribute="trailing" secondItem="s2g-IP-JZV" secondAttribute="trailing" constant="15" id="gXI-Ts-7VN"/>
+                <constraint firstAttribute="trailing" secondItem="pY1-XH-zHG" secondAttribute="trailing" constant="15" id="qTx-lY-Q66"/>
+            </constraints>
+            <size key="customSize" width="449" height="52"/>
+            <connections>
+                <outlet property="chapter" destination="PDR-6u-mSF" id="2PK-U9-n5g"/>
+                <outlet property="name" destination="s2g-IP-JZV" id="oej-U1-9eH"/>
+                <outlet property="releaseDate" destination="pY1-XH-zHG" id="ua6-7J-CzE"/>
+            </connections>
+            <point key="canvasLocation" x="251.14503816793894" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+</document>

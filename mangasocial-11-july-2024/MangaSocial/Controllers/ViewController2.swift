@@ -81,14 +81,14 @@ class ViewController2: UIViewController, GADFullScreenContentDelegate {
     private func viewConfig(){
         setGradientBackground()
         topView.backgroundColor = .white
-        topView.layer.backgroundColor = UIColor(red: 0.118, green: 0.118, blue: 0.118, alpha: 1).cgColor
+        topView.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
     }
     
     func setGradientBackground() {
 
-        let colorTop =  UIColor(red: 0.953, green: 0.639, blue: 0.016, alpha: 1).cgColor
-        let colorMid = UIColor(red: 0.946, green: 0.789, blue: 0.478, alpha: 1).cgColor
-        let colorBottom = UIColor(red: 0.953, green: 0.639, blue: 0.016, alpha: 0.68).cgColor
+        let colorTop =  UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        let colorMid = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        let colorBottom = UIColor(red: 0, green: 0, blue: 0, alpha: 0.68).cgColor
                     
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorMid,colorBottom]
@@ -102,8 +102,8 @@ class ViewController2: UIViewController, GADFullScreenContentDelegate {
         
         
         if t2 == true{
-            historyLb.textColor = .black
-            historyLine.backgroundColor = .black
+            historyLb.textColor = .white
+            historyLine.backgroundColor = .white
         }
         else{
             historyLb.textColor = .white
@@ -111,8 +111,8 @@ class ViewController2: UIViewController, GADFullScreenContentDelegate {
         }
         
         if t3 == true{
-            bookMarkLb.textColor = .black
-            bookMarkLine.backgroundColor = .black
+            bookMarkLb.textColor = .white
+            bookMarkLine.backgroundColor = .white
         }
         else{
             bookMarkLb.textColor = .white

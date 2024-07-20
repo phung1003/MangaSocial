@@ -7,29 +7,33 @@
 
 import UIKit
 
-class HomeNewReleaseCell: UICollectionViewCell {
-    var homeData:HomeMangaSocialModel = HomeMangaSocialModel()
-    @IBOutlet weak var homeCLV:UICollectionView!
+class Type3CLVCell: TypeCell {
+
+    @IBOutlet weak var moreBTN: UIButton!
+    
+    @IBAction func didTapMore() {
+        print("Yes")
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        homeCLV.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
+        homeCLV.register(UINib(nibName: "Type3Cell", bundle: nil), forCellWithReuseIdentifier: "Type3Cell")
         homeCLV.backgroundColor = UIColor.clear
     }
 
 }
-extension HomeNewReleaseCell : UICollectionViewDelegate, UICollectionViewDataSource{
+extension Type3CLVCell : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homeData.listNewRelease.count
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
-        cell.releaseDate.text = "Update: \(homeData.listNewRelease[indexPath.row].time_release)"
-        cell.rate.text = homeData.listNewRelease[indexPath.row].rate
-        cell.name.text = homeData.listNewRelease[indexPath.row].title_manga
-        cell.chapter.text = "Chapter: \(homeData.listNewRelease[indexPath.row].chapter_new)"
-        cell.image.kf.setImage(with: URL(string: homeData.listNewRelease[indexPath.row].image_poster_link_goc))
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Type3Cell", for: indexPath) as! Type3Cell
+        cell.backgroundColor = colorFromHex(hex: "#EB991D")
+        cell.releaseDate.text = "\(data[indexPath.row].time_release)"
+        cell.name.text = data[indexPath.row].title_manga
+        cell.chapter.text = "\(data[indexPath.row].chapter_new)"
+        cell.layer.cornerRadius = 10.0
         return cell
     }
     
@@ -37,7 +41,7 @@ extension HomeNewReleaseCell : UICollectionViewDelegate, UICollectionViewDataSou
         if let parent = self.parentViewController as? HomeViewController{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DetailMangaVC") as! DetailMangaVC
-            var name = homeData.listNewRelease[indexPath.row].url_manga
+            var name = data[indexPath.row].url_manga
             if let url = URL(string: name) {
                 vc.linkManga += url.lastPathComponent
             }
@@ -48,12 +52,12 @@ extension HomeNewReleaseCell : UICollectionViewDelegate, UICollectionViewDataSou
     }
 }
 
-extension HomeNewReleaseCell : UICollectionViewDelegateFlowLayout{
+extension Type3CLVCell : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if UIDevice.current.userInterfaceIdiom == .pad {
-            return 10
+            return 5
         }
-        return 24
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -63,10 +67,10 @@ extension HomeNewReleaseCell : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if UIDevice.current.userInterfaceIdiom == .pad {
-            return CGSize(width: 119, height: 227)
+            return CGSize(width: collectionView.frame.width, height: 50)
         }
         
-        return CGSize(width:119, height: 227)
+        return CGSize(width:collectionView.frame.width, height: 50)
     }
 }
 

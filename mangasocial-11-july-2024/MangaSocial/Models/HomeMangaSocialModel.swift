@@ -17,6 +17,7 @@ class itemMangaModel : NSObject{
     var url_manga : String = ""
     var author: String = ""
     var categories: String = ""
+    var description_manga: String = ""
     
     
     func initLoad(_ json:  [String: Any]) -> itemMangaModel{
@@ -39,6 +40,8 @@ class itemMangaModel : NSObject{
         if let temp = json["title_manga"] as? String { title_manga = temp }
         else if let temp = json["manga_title"] as? String {title_manga = temp}
         else if let temp = json["title_novel"] as? String {title_manga = temp}
+
+        if let temp = json["description_manga"] as? String { description_manga = temp }
 
 
         if let temp = json["url_chapter"] as? String { url_chapter = temp}

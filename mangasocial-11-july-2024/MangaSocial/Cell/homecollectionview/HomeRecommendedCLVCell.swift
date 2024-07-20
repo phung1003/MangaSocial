@@ -10,10 +10,14 @@ import UIKit
 class HomeRecommendedCLVCell: UICollectionViewCell {
 
     var homeData:HomeMangaSocialModel = HomeMangaSocialModel()
+    
     @IBOutlet weak var homeCLV:UICollectionView!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
+  
+        
         homeCLV.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
         homeCLV.backgroundColor = UIColor.clear
     }

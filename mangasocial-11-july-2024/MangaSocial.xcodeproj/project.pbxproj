@@ -49,12 +49,6 @@
 		B720F7772B524BED0043442A /* searchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B720F7312B524BED0043442A /* searchItemCell.xib */; };
 		B720F7782B524BED0043442A /* searchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B720F7322B524BED0043442A /* searchCell.swift */; };
 		B720F7792B524BED0043442A /* searchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B720F7332B524BED0043442A /* searchItemCell.swift */; };
-		B720F77A2B524BED0043442A /* HomeRecommendedCLVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B720F7352B524BED0043442A /* HomeRecommendedCLVCell.swift */; };
-		B720F77B2B524BED0043442A /* HomeNewReleaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B720F7362B524BED0043442A /* HomeNewReleaseCell.swift */; };
-		B720F77C2B524BED0043442A /* HomeNewReleaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B720F7372B524BED0043442A /* HomeNewReleaseCell.xib */; };
-		B720F77D2B524BED0043442A /* HomeRecentCLVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B720F7382B524BED0043442A /* HomeRecentCLVCell.xib */; };
-		B720F77E2B524BED0043442A /* HomeRecentCLVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B720F7392B524BED0043442A /* HomeRecentCLVCell.swift */; };
-		B720F77F2B524BED0043442A /* HomeRecommendedCLVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B720F73A2B524BED0043442A /* HomeRecommendedCLVCell.xib */; };
 		B720F7802B524BED0043442A /* genresCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B720F73B2B524BED0043442A /* genresCell.xib */; };
 		B720F7812B524BED0043442A /* mpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B720F73C2B524BED0043442A /* mpCell.xib */; };
 		B720F7822B524BED0043442A /* genresTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B720F73D2B524BED0043442A /* genresTitleCell.swift */; };
@@ -110,12 +104,35 @@
 		B7A332862B9AEF5000C8C89A /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7A332842B9AEF5000C8C89A /* ProfileCell.xib */; };
 		B7A332892B9B1D3F00C8C89A /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A332882B9B1D3F00C8C89A /* EditProfileVC.swift */; };
 		B7B972002B708E6D009884EB /* CommentStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B971FF2B708E6D009884EB /* CommentStructure.swift */; };
+		B7BBD5D62C49177C00B34DC9 /* HomeRecommendedCLVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BBD5CC2C49177C00B34DC9 /* HomeRecommendedCLVCell.swift */; };
+		B7BBD5D72C49177C00B34DC9 /* HomeTop15CLVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7BBD5CD2C49177C00B34DC9 /* HomeTop15CLVCell.xib */; };
+		B7BBD5D82C49177C00B34DC9 /* HomeNewReleaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BBD5CE2C49177C00B34DC9 /* HomeNewReleaseCell.swift */; };
+		B7BBD5D92C49177C00B34DC9 /* HomeComingCLVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BBD5CF2C49177C00B34DC9 /* HomeComingCLVCell.swift */; };
+		B7BBD5DA2C49177C00B34DC9 /* HomeTop15CLVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BBD5D02C49177C00B34DC9 /* HomeTop15CLVCell.swift */; };
+		B7BBD5DB2C49177C00B34DC9 /* HomeRecommendedCLVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7BBD5D12C49177C00B34DC9 /* HomeRecommendedCLVCell.xib */; };
+		B7BBD5DC2C49177C00B34DC9 /* HomeComingCLVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7BBD5D22C49177C00B34DC9 /* HomeComingCLVCell.xib */; };
+		B7BBD5DD2C49177C00B34DC9 /* HomeNewReleaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7BBD5D32C49177C00B34DC9 /* HomeNewReleaseCell.xib */; };
+		B7BBD5DE2C49177C00B34DC9 /* HomeRecentCLVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BBD5D42C49177C00B34DC9 /* HomeRecentCLVCell.swift */; };
+		B7BBD5DF2C49177C00B34DC9 /* HomeRecentCLVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7BBD5D52C49177C00B34DC9 /* HomeRecentCLVCell.xib */; };
+		B7BBD5E42C49197900B34DC9 /* Type1CLVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BBD5E22C49197900B34DC9 /* Type1CLVCell.swift */; };
+		B7BBD5E52C49197900B34DC9 /* Type1CLVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7BBD5E32C49197900B34DC9 /* Type1CLVCell.xib */; };
+		B7BBD5E92C491A7000B34DC9 /* Type1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BBD5E72C491A7000B34DC9 /* Type1Cell.swift */; };
+		B7BBD5EA2C491A7000B34DC9 /* Type1Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7BBD5E82C491A7000B34DC9 /* Type1Cell.xib */; };
 		B7CBE2252B59228A00D333CC /* PageRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CBE2242B59228A00D333CC /* PageRead.swift */; };
 		B7CBE2292B5A538B00D333CC /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CBE2272B5A538B00D333CC /* RecentCell.swift */; };
 		B7CBE22A2B5A538B00D333CC /* RecentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7CBE2282B5A538B00D333CC /* RecentCell.xib */; };
 		B7CBE22D2B5A618500D333CC /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CBE22B2B5A618500D333CC /* ItemCell.swift */; };
 		B7CBE22E2B5A618500D333CC /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7CBE22C2B5A618500D333CC /* ItemCell.xib */; };
 		B7D229302B60032D00DCFC5B /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D2292F2B60032D00DCFC5B /* CommentModel.swift */; };
+		B7ED869C2C4A3F8300952F70 /* Type2CLVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED869A2C4A3F8300952F70 /* Type2CLVCell.swift */; };
+		B7ED869D2C4A3F8300952F70 /* Type2CLVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7ED869B2C4A3F8300952F70 /* Type2CLVCell.xib */; };
+		B7ED86A12C4A406400952F70 /* Type2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED869F2C4A406400952F70 /* Type2Cell.swift */; };
+		B7ED86A22C4A406400952F70 /* Type2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7ED86A02C4A406400952F70 /* Type2Cell.xib */; };
+		B7ED86A52C4A4B9A00952F70 /* Type3CLVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED86A32C4A4B9A00952F70 /* Type3CLVCell.swift */; };
+		B7ED86A62C4A4B9A00952F70 /* Type3CLVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7ED86A42C4A4B9A00952F70 /* Type3CLVCell.xib */; };
+		B7ED86AA2C4A4BF200952F70 /* Type3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED86A82C4A4BF200952F70 /* Type3Cell.swift */; };
+		B7ED86AB2C4A4BF200952F70 /* Type3Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7ED86A92C4A4BF200952F70 /* Type3Cell.xib */; };
+		B7ED86AD2C4A6F9900952F70 /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED86AC2C4A6F9900952F70 /* TypeCell.swift */; };
 		E1DBC0DDAAF5297ED4DEBE48 /* Pods_MangaSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72AF27E1C7658709BA3A734 /* Pods_MangaSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -164,12 +181,6 @@
 		B720F7312B524BED0043442A /* searchItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchItemCell.xib; sourceTree = "<group>"; };
 		B720F7322B524BED0043442A /* searchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchCell.swift; sourceTree = "<group>"; };
 		B720F7332B524BED0043442A /* searchItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchItemCell.swift; sourceTree = "<group>"; };
-		B720F7352B524BED0043442A /* HomeRecommendedCLVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRecommendedCLVCell.swift; sourceTree = "<group>"; };
-		B720F7362B524BED0043442A /* HomeNewReleaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNewReleaseCell.swift; sourceTree = "<group>"; };
-		B720F7372B524BED0043442A /* HomeNewReleaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNewReleaseCell.xib; sourceTree = "<group>"; };
-		B720F7382B524BED0043442A /* HomeRecentCLVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeRecentCLVCell.xib; sourceTree = "<group>"; };
-		B720F7392B524BED0043442A /* HomeRecentCLVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRecentCLVCell.swift; sourceTree = "<group>"; };
-		B720F73A2B524BED0043442A /* HomeRecommendedCLVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeRecommendedCLVCell.xib; sourceTree = "<group>"; };
 		B720F73B2B524BED0043442A /* genresCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = genresCell.xib; sourceTree = "<group>"; };
 		B720F73C2B524BED0043442A /* mpCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mpCell.xib; sourceTree = "<group>"; };
 		B720F73D2B524BED0043442A /* genresTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = genresTitleCell.swift; sourceTree = "<group>"; };
@@ -221,12 +232,35 @@
 		B7A332842B9AEF5000C8C89A /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		B7A332882B9B1D3F00C8C89A /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		B7B971FF2B708E6D009884EB /* CommentStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentStructure.swift; sourceTree = "<group>"; };
+		B7BBD5CC2C49177C00B34DC9 /* HomeRecommendedCLVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRecommendedCLVCell.swift; sourceTree = "<group>"; };
+		B7BBD5CD2C49177C00B34DC9 /* HomeTop15CLVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTop15CLVCell.xib; sourceTree = "<group>"; };
+		B7BBD5CE2C49177C00B34DC9 /* HomeNewReleaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNewReleaseCell.swift; sourceTree = "<group>"; };
+		B7BBD5CF2C49177C00B34DC9 /* HomeComingCLVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeComingCLVCell.swift; sourceTree = "<group>"; };
+		B7BBD5D02C49177C00B34DC9 /* HomeTop15CLVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTop15CLVCell.swift; sourceTree = "<group>"; };
+		B7BBD5D12C49177C00B34DC9 /* HomeRecommendedCLVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeRecommendedCLVCell.xib; sourceTree = "<group>"; };
+		B7BBD5D22C49177C00B34DC9 /* HomeComingCLVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeComingCLVCell.xib; sourceTree = "<group>"; };
+		B7BBD5D32C49177C00B34DC9 /* HomeNewReleaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNewReleaseCell.xib; sourceTree = "<group>"; };
+		B7BBD5D42C49177C00B34DC9 /* HomeRecentCLVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRecentCLVCell.swift; sourceTree = "<group>"; };
+		B7BBD5D52C49177C00B34DC9 /* HomeRecentCLVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeRecentCLVCell.xib; sourceTree = "<group>"; };
+		B7BBD5E22C49197900B34DC9 /* Type1CLVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type1CLVCell.swift; sourceTree = "<group>"; };
+		B7BBD5E32C49197900B34DC9 /* Type1CLVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Type1CLVCell.xib; sourceTree = "<group>"; };
+		B7BBD5E72C491A7000B34DC9 /* Type1Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type1Cell.swift; sourceTree = "<group>"; };
+		B7BBD5E82C491A7000B34DC9 /* Type1Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Type1Cell.xib; sourceTree = "<group>"; };
 		B7CBE2242B59228A00D333CC /* PageRead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageRead.swift; sourceTree = "<group>"; };
 		B7CBE2272B5A538B00D333CC /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
 		B7CBE2282B5A538B00D333CC /* RecentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentCell.xib; sourceTree = "<group>"; };
 		B7CBE22B2B5A618500D333CC /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		B7CBE22C2B5A618500D333CC /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		B7D2292F2B60032D00DCFC5B /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		B7ED869A2C4A3F8300952F70 /* Type2CLVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type2CLVCell.swift; sourceTree = "<group>"; };
+		B7ED869B2C4A3F8300952F70 /* Type2CLVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Type2CLVCell.xib; sourceTree = "<group>"; };
+		B7ED869F2C4A406400952F70 /* Type2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type2Cell.swift; sourceTree = "<group>"; };
+		B7ED86A02C4A406400952F70 /* Type2Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Type2Cell.xib; sourceTree = "<group>"; };
+		B7ED86A32C4A4B9A00952F70 /* Type3CLVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type3CLVCell.swift; sourceTree = "<group>"; };
+		B7ED86A42C4A4B9A00952F70 /* Type3CLVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Type3CLVCell.xib; sourceTree = "<group>"; };
+		B7ED86A82C4A4BF200952F70 /* Type3Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type3Cell.swift; sourceTree = "<group>"; };
+		B7ED86A92C4A4BF200952F70 /* Type3Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Type3Cell.xib; sourceTree = "<group>"; };
+		B7ED86AC2C4A6F9900952F70 /* TypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
 		CED1A5660EAC4DE09DAFD3E8 /* Pods-MangaSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MangaSocial.debug.xcconfig"; path = "Target Support Files/Pods-MangaSocial/Pods-MangaSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		DA227E7D483ACDFB8B09BD54 /* Pods-MangaSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MangaSocial.release.xcconfig"; path = "Target Support Files/Pods-MangaSocial/Pods-MangaSocial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -405,12 +439,8 @@
 		B720F7342B524BED0043442A /* homecollectionview */ = {
 			isa = PBXGroup;
 			children = (
-				B720F7352B524BED0043442A /* HomeRecommendedCLVCell.swift */,
-				B720F7362B524BED0043442A /* HomeNewReleaseCell.swift */,
-				B720F7372B524BED0043442A /* HomeNewReleaseCell.xib */,
-				B720F7382B524BED0043442A /* HomeRecentCLVCell.xib */,
-				B720F7392B524BED0043442A /* HomeRecentCLVCell.swift */,
-				B720F73A2B524BED0043442A /* HomeRecommendedCLVCell.xib */,
+				B7BBD5E12C49184C00B34DC9 /* MangaReaderCLV */,
+				B7BBD5E02C4917CE00B34DC9 /* Offline CLV */,
 				B7CBE2262B5A4CFD00D333CC /* Cell */,
 			);
 			path = homecollectionview;
@@ -437,6 +467,49 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		B7BBD5E02C4917CE00B34DC9 /* Offline CLV */ = {
+			isa = PBXGroup;
+			children = (
+				B7BBD5CF2C49177C00B34DC9 /* HomeComingCLVCell.swift */,
+				B7BBD5D22C49177C00B34DC9 /* HomeComingCLVCell.xib */,
+				B7BBD5CE2C49177C00B34DC9 /* HomeNewReleaseCell.swift */,
+				B7BBD5D32C49177C00B34DC9 /* HomeNewReleaseCell.xib */,
+				B7BBD5D42C49177C00B34DC9 /* HomeRecentCLVCell.swift */,
+				B7BBD5D52C49177C00B34DC9 /* HomeRecentCLVCell.xib */,
+				B7BBD5CC2C49177C00B34DC9 /* HomeRecommendedCLVCell.swift */,
+				B7BBD5D12C49177C00B34DC9 /* HomeRecommendedCLVCell.xib */,
+				B7BBD5D02C49177C00B34DC9 /* HomeTop15CLVCell.swift */,
+				B7BBD5CD2C49177C00B34DC9 /* HomeTop15CLVCell.xib */,
+			);
+			name = "Offline CLV";
+			sourceTree = "<group>";
+		};
+		B7BBD5E12C49184C00B34DC9 /* MangaReaderCLV */ = {
+			isa = PBXGroup;
+			children = (
+				B7BBD5E22C49197900B34DC9 /* Type1CLVCell.swift */,
+				B7BBD5E32C49197900B34DC9 /* Type1CLVCell.xib */,
+				B7BBD5E62C491A5800B34DC9 /* Type1Cell */,
+				B7ED869A2C4A3F8300952F70 /* Type2CLVCell.swift */,
+				B7ED869B2C4A3F8300952F70 /* Type2CLVCell.xib */,
+				B7ED869E2C4A404500952F70 /* Type2Cell */,
+				B7ED86A32C4A4B9A00952F70 /* Type3CLVCell.swift */,
+				B7ED86A42C4A4B9A00952F70 /* Type3CLVCell.xib */,
+				B7ED86A72C4A4BD200952F70 /* Type3Cell */,
+				B7ED86AC2C4A6F9900952F70 /* TypeCell.swift */,
+			);
+			name = MangaReaderCLV;
+			sourceTree = "<group>";
+		};
+		B7BBD5E62C491A5800B34DC9 /* Type1Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B7BBD5E72C491A7000B34DC9 /* Type1Cell.swift */,
+				B7BBD5E82C491A7000B34DC9 /* Type1Cell.xib */,
+			);
+			name = Type1Cell;
+			sourceTree = "<group>";
+		};
 		B7CBE2262B5A4CFD00D333CC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,6 +521,24 @@
 				B74D51DE2B5D077900FD0130 /* ServerCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		B7ED869E2C4A404500952F70 /* Type2Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B7ED869F2C4A406400952F70 /* Type2Cell.swift */,
+				B7ED86A02C4A406400952F70 /* Type2Cell.xib */,
+			);
+			name = Type2Cell;
+			sourceTree = "<group>";
+		};
+		B7ED86A72C4A4BD200952F70 /* Type3Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B7ED86A82C4A4BF200952F70 /* Type3Cell.swift */,
+				B7ED86A92C4A4BF200952F70 /* Type3Cell.xib */,
+			);
+			name = Type3Cell;
 			sourceTree = "<group>";
 		};
 		F8EC886FFF2D25A9503DEC0A /* Pods */ = {
@@ -530,33 +621,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				B78209442B5FD1C600280C6E /* CommentCell.xib in Resources */,
-				B720F77C2B524BED0043442A /* HomeNewReleaseCell.xib in Resources */,
 				B720F7952B524BED0043442A /* genresTitleCell.xib in Resources */,
+				B7BBD5D72C49177C00B34DC9 /* HomeTop15CLVCell.xib in Resources */,
+				B7ED869D2C4A3F8300952F70 /* Type2CLVCell.xib in Resources */,
 				B720F7862B524BED0043442A /* CartoonImageCLVCell.xib in Resources */,
-				B720F77D2B524BED0043442A /* HomeRecentCLVCell.xib in Resources */,
 				B7CBE22E2B5A618500D333CC /* ItemCell.xib in Resources */,
 				B720F7832B524BED0043442A /* CategoriesSuggestCLVCell.xib in Resources */,
 				B7CBE22A2B5A538B00D333CC /* RecentCell.xib in Resources */,
 				B797F6B12B6398BB00C5D84D /* NovelCell.xib in Resources */,
 				B720F7902B524BED0043442A /* imageMangaCell.xib in Resources */,
+				B7ED86A22C4A406400952F70 /* Type2Cell.xib in Resources */,
 				B720F79B2B524BF90043442A /* LaunchScreen.storyboard in Resources */,
 				B720F7942B524BED0043442A /* searchCell.xib in Resources */,
 				B720F7972B524BED0043442A /* headerReadMangaCell.xib in Resources */,
-				B720F77F2B524BED0043442A /* HomeRecommendedCLVCell.xib in Resources */,
 				B720F7802B524BED0043442A /* genresCell.xib in Resources */,
+				B7BBD5DC2C49177C00B34DC9 /* HomeComingCLVCell.xib in Resources */,
 				B720F79C2B524BF90043442A /* Main.storyboard in Resources */,
 				B720F78D2B524BED0043442A /* mangaCell.xib in Resources */,
 				B7A332862B9AEF5000C8C89A /* ProfileCell.xib in Resources */,
+				B7ED86AB2C4A4BF200952F70 /* Type3Cell.xib in Resources */,
+				B7BBD5EA2C491A7000B34DC9 /* Type1Cell.xib in Resources */,
+				B7BBD5DD2C49177C00B34DC9 /* HomeNewReleaseCell.xib in Resources */,
 				B71FC1DE2B70C8C8005BF835 /* ReplyCell.xib in Resources */,
 				B720F7772B524BED0043442A /* searchItemCell.xib in Resources */,
+				B7BBD5DF2C49177C00B34DC9 /* HomeRecentCLVCell.xib in Resources */,
 				B720F78B2B524BED0043442A /* savedCell.xib in Resources */,
 				B720F7812B524BED0043442A /* mpCell.xib in Resources */,
+				B7ED86A62C4A4B9A00952F70 /* Type3CLVCell.xib in Resources */,
 				B720F7542B524BED0043442A /* Assets.xcassets in Resources */,
 				B720F78F2B524BED0043442A /* chapterCell.xib in Resources */,
 				B720F7982B524BED0043442A /* homeCell.xib in Resources */,
 				B74D51E02B5D077A00FD0130 /* ServerCell.xib in Resources */,
+				B7BBD5DB2C49177C00B34DC9 /* HomeRecommendedCLVCell.xib in Resources */,
 				B78209402B5FAD7300280C6E /* UserCommentCell.xib in Resources */,
 				B720F7962B524BED0043442A /* headerOffReadMangaCell.xib in Resources */,
+				B7BBD5E52C49197900B34DC9 /* Type1CLVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,18 +712,24 @@
 				B720F7662B524BED0043442A /* ProfileVC.swift in Sources */,
 				B720F78C2B524BED0043442A /* savedCell.swift in Sources */,
 				B720F7652B524BED0043442A /* DetailManga.swift in Sources */,
+				B7ED869C2C4A3F8300952F70 /* Type2CLVCell.swift in Sources */,
 				B720F76E2B524BED0043442A /* TabVC.swift in Sources */,
+				B7ED86A12C4A406400952F70 /* Type2Cell.swift in Sources */,
 				B797F6B32B63A41900C5D84D /* SaveNovelModel.swift in Sources */,
 				B797F6AB2B63931C00C5D84D /* ReadNovelVC.swift in Sources */,
+				B7BBD5D82C49177C00B34DC9 /* HomeNewReleaseCell.swift in Sources */,
 				B797F6B52B63AD5800C5D84D /* readNovelOffVC.swift in Sources */,
+				B7BBD5DE2C49177C00B34DC9 /* HomeRecentCLVCell.swift in Sources */,
 				B720F78E2B524BED0043442A /* chapterCell.swift in Sources */,
 				B720F76B2B524BED0043442A /* LoadingAppVC.swift in Sources */,
 				B720F7782B524BED0043442A /* searchCell.swift in Sources */,
+				B7BBD5D92C49177C00B34DC9 /* HomeComingCLVCell.swift in Sources */,
 				B720F7562B524BED0043442A /* APIManager.swift in Sources */,
-				B720F77B2B524BED0043442A /* HomeNewReleaseCell.swift in Sources */,
 				B720F7702B524BED0043442A /* HomeViewController.swift in Sources */,
+				B7BBD5DA2C49177C00B34DC9 /* HomeTop15CLVCell.swift in Sources */,
 				B71923C62B91B7D900C43CEE /* ForgotPasswordVC.swift in Sources */,
 				B720F7792B524BED0043442A /* searchItemCell.swift in Sources */,
+				B7ED86A52C4A4B9A00952F70 /* Type3CLVCell.swift in Sources */,
 				B720F7872B524BED0043442A /* headerReadMangaCell.swift in Sources */,
 				B797F6AD2B63947C00C5D84D /* NovelModel.swift in Sources */,
 				B720F7612B524BED0043442A /* ImageModel.swift in Sources */,
@@ -637,6 +742,7 @@
 				B7D229302B60032D00DCFC5B /* CommentModel.swift in Sources */,
 				B720F75E2B524BED0043442A /* ChapterModel.swift in Sources */,
 				B720F78A2B524BED0043442A /* genresCell.swift in Sources */,
+				B7BBD5D62C49177C00B34DC9 /* HomeRecommendedCLVCell.swift in Sources */,
 				B720F7922B524BED0043442A /* imageMangaCell.swift in Sources */,
 				B720F75C2B524BED0043442A /* PhotoItem.swift in Sources */,
 				B753F1552B95A15C00A8CCC7 /* ProfileMenuVC.swift in Sources */,
@@ -645,9 +751,12 @@
 				B78209432B5FD1C600280C6E /* CommentCell.swift in Sources */,
 				B720F7932B524BED0043442A /* CartoonImageCLVCell.swift in Sources */,
 				B720F7582B524BED0043442A /* ImageFaceModel.swift in Sources */,
+				B7BBD5E42C49197900B34DC9 /* Type1CLVCell.swift in Sources */,
 				B720F7762B524BED0043442A /* popupChapterVC.swift in Sources */,
 				B74D51DF2B5D077900FD0130 /* ServerCell.swift in Sources */,
+				B7ED86AD2C4A6F9900952F70 /* TypeCell.swift in Sources */,
 				B720F7742B524BED0043442A /* hisAbookVC.swift in Sources */,
+				B7ED86AA2C4A4BF200952F70 /* Type3Cell.swift in Sources */,
 				B720F7622B524BED0043442A /* ImgModel.swift in Sources */,
 				B720F7592B524BED0043442A /* GenresModel.swift in Sources */,
 				B7B972002B708E6D009884EB /* CommentStructure.swift in Sources */,
@@ -665,16 +774,15 @@
 				B782093F2B5FAD7300280C6E /* UserCommentCell.swift in Sources */,
 				B720F7682B524BED0043442A /* readMangaOffVC.swift in Sources */,
 				B720F7842B524BED0043442A /* CategoriesSuggestCLVCell.swift in Sources */,
+				B7BBD5E92C491A7000B34DC9 /* Type1Cell.swift in Sources */,
 				B720F75A2B524BED0043442A /* HomeMangaSocialModel.swift in Sources */,
 				B720F7632B524BED0043442A /* LastestManga.swift in Sources */,
 				B7CBE2252B59228A00D333CC /* PageRead.swift in Sources */,
-				B720F77A2B524BED0043442A /* HomeRecommendedCLVCell.swift in Sources */,
 				B720F7712B524BED0043442A /* GenreSearchVC.swift in Sources */,
 				B720F7722B524BED0043442A /* searchVC.swift in Sources */,
 				B720F7892B524BED0043442A /* mangaCell.swift in Sources */,
 				B720F7642B524BED0043442A /* SaveChapterModel.swift in Sources */,
 				B720F7882B524BED0043442A /* homeCell.swift in Sources */,
-				B720F77E2B524BED0043442A /* HomeRecentCLVCell.swift in Sources */,
 				B720F7552B524BED0043442A /* Network.swift in Sources */,
 				B720F76F2B524BED0043442A /* GenresVC.swift in Sources */,
 				B720F76D2B524BED0043442A /* Loading2VC.swift in Sources */,

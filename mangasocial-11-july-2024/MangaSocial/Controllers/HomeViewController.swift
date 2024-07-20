@@ -34,7 +34,8 @@ class HomeViewController: UIViewController {
     var serverList: OrderedDictionary<String,String> = ["0": "mangainn.net", "1": "ww5.manganelo.tv", "2": "mangareader.cc", "3": "ninemanga.com", "4": "bestlightnovel.com", "19": "azoranov.com", "6": "mangakomi.io" , "7": "readm.org", "8": "mangajar.com", "9": "swatmanga.com", "11": "novelhall.com", "12": "mto.to", "10": "mangajar.com", "5": "mangajar.com/manga", "13": "de.ninemanga.com", "14": "br.ninemanga.com", "15": "ru.ninemanga.com", "16": "es.ninemanga.com", "17": "fr.ninemanga.com", "18": "it.ninemanga.com"]
     var webServerList: OrderedDictionary<String, String> = ["1": "ww5.manganelo.tv", "2": "mangareader.cc", "3": "ninemanga.com", "4": "bestlightnovel.com", "6": "mangakomi.io", "7": "readm.org" , "12": "mto.to", "13": "de.ninemanga.com", "14": "br.ninemanga.com", "15": "ru.ninemanga.com", "16": "es.ninemanga.com", "17": "fr.ninemanga.com", "18": "it.ninemanga.com"]
     
-
+    let mangaReaderCell = [1,2,2,1]
+    
 //    var serverList = ["0", "1", "2", "3", "4", "19", "6", "7", "8", "9", "19", "11", "12", "13", "14", "15", "16", "17", "18"]
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
@@ -194,6 +195,13 @@ class HomeViewController: UIViewController {
         homeCLV.register(UINib(nibName: "HomeRecentCLVCell", bundle: nil), forCellWithReuseIdentifier: "HomeRecentCLVCell")
         homeCLV.register(UINib(nibName: "HomeRecommendedCLVCell", bundle: nil), forCellWithReuseIdentifier: "HomeRecommendedCLVCell")
         homeCLV.register(UINib(nibName: "HomeNewReleaseCell", bundle: nil), forCellWithReuseIdentifier: "HomeNewReleaseCell")
+        homeCLV.register(UINib(nibName: "HomeTop15CLVCell", bundle: nil), forCellWithReuseIdentifier: "HomeTop15CLVCell")
+        homeCLV.register(UINib(nibName: "HomeComingCLVCell", bundle: nil), forCellWithReuseIdentifier: "HomeComingCLVCell")
+        homeCLV.register(UINib(nibName: "Type1CLVCell", bundle: nil), forCellWithReuseIdentifier: "Type1CLVCell")
+        homeCLV.register(UINib(nibName: "Type2CLVCell", bundle: nil), forCellWithReuseIdentifier: "Type2CLVCell")
+        homeCLV.register(UINib(nibName: "Type3CLVCell", bundle: nil), forCellWithReuseIdentifier: "Type3CLVCell")
+
+
         serverCLV.register(UINib(nibName: "ServerCell", bundle: nil), forCellWithReuseIdentifier: "ServerCell")
         serverCLV.reloadData()
         
@@ -218,7 +226,7 @@ class HomeViewController: UIViewController {
         search.layer.masksToBounds = true
         search.addLeftImage(name: "search")
         topView.backgroundColor = .white
-        topView.layer.backgroundColor = UIColor(red: 0.118, green: 0.118, blue: 0.118, alpha: 1).cgColor
+        topView.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
         homeCLV.backgroundColor = .clear
         
         serverCLV.backgroundColor = .gray
@@ -235,9 +243,9 @@ class HomeViewController: UIViewController {
     
     func setGradientBackground() {
 
-        let colorTop =  UIColor(red: 0.953, green: 0.639, blue: 0.016, alpha: 1).cgColor
-        let colorMid = UIColor(red: 0.946, green: 0.789, blue: 0.478, alpha: 1).cgColor
-        let colorBottom = UIColor(red: 0.953, green: 0.639, blue: 0.016, alpha: 0.68).cgColor
+        let colorTop =  UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        let colorMid = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        let colorBottom = UIColor(red: 0, green: 0, blue: 0, alpha: 0.68).cgColor
                     
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorMid,colorBottom]
@@ -338,62 +346,30 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        if collectionView == serverCLV {
-            return UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        if collectionView == serverCLV{
+            return 1
         }
-        if section == 0 {
-            return UIEdgeInsets(top: 0.0, left: 1.0, bottom: 0.0, right: 1.0)
-        } else {
-            // Normal insets for collection
-            return UIEdgeInsets(top: 0.0, left: 1.0, bottom: 0.0, right: 1.0)
-        }
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == serverCLV {
             return serverList.count
         }
-        if section == 0{
-            return 1
-        }
-        if section == 1{
-            return 1
-        }
+        
         return 1
     }
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if collectionView == serverCLV{
-            return 1
-        }
-        return 3
-    }
+   
     
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if collectionView == serverCLV{
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServerCell", for: indexPath) as! ServerCell
-//            cell.image.image = UIImage(named: serverList[indexPath.row])
-//
-//            return cell
-//        }
-//        
-//        if indexPath.section == 0 {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeRecentCLVCell", for: indexPath) as! HomeRecentCLVCell
-//            cell.homeData = self.homeData
-//            cell.homeCLV.reloadData()
-//            return cell
-//        }
-//        if indexPath.section == 1{
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeNewReleaseCell", for: indexPath) as! HomeNewReleaseCell
-//            cell.homeData = self.homeData
-//            cell.homeCLV.reloadData()
-//            return cell
-//        }
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeRecommendedCLVCell", for: indexPath) as! HomeRecommendedCLVCell
-//        cell.homeData = self.homeData
-//        cell.homeCLV.reloadData()
-//        return cell
-//    }
+    fileprivate func createCell(_ collectionView: UICollectionView, _ indexPath: IndexPath,_ identifier: String,_ data: [itemMangaModel],_ title: String) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! TypeCell
+        cell.data = data
+        cell.title.text = title
+        cell.homeCLV.reloadData()
+        return cell
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == serverCLV {
@@ -404,23 +380,38 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             return cell
         }
         
-        
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeRecentCLVCell", for: indexPath) as! HomeRecentCLVCell
             cell.homeData = self.homeData
             cell.homeCLV.reloadData()
             return cell
         }
+        
+        
         if indexPath.section == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeNewReleaseCell", for: indexPath) as! HomeNewReleaseCell
-            cell.homeData = self.homeData
-            cell.homeCLV.reloadData()
-            return cell
+//            var identifier = ""
+//            switch mangaReaderCell[indexPath.section] {
+//            case 1:
+//                identifier = "Type1CLVCell"
+//            case 2:
+//                identifier = "Type2CLVCell"
+//            default:
+//                identifier = "Type3CLVCell"
+//            }
+            
+            return createCell(collectionView, indexPath, "Type1CLVCell", homeData.listNewRelease, "New Release")
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeRecommendedCLVCell", for: indexPath) as! HomeRecommendedCLVCell
-        cell.homeData = self.homeData
-        cell.homeCLV.reloadData()
-        return cell
+        if indexPath.section == 2{
+            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listRecommended, "Recommended Manga")
+        
+        }
+        if indexPath.section == 3{
+            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listTop15, "Top 15 Manga")
+          
+        }
+        else {
+            return createCell(collectionView, indexPath, "Type1CLVCell", homeData.listCooming, "Coming Soon")
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -458,35 +449,48 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
 }
 
 extension HomeViewController : UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if collectionView == serverCLV {
+            return UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+        }
+        else {
+            return UIEdgeInsets(top: 0.0, left: 1.0, bottom: 0.0, right: 1.0)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if UIDevice.current.userInterfaceIdiom == .pad {
-            return 10
+            return 24
         }
         return 24
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == serverCLV {
             return CGSize(width: 100, height: 50)
         }
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            if indexPath.section == 0{
-                return CGSize(width: homeCLV.bounds.width, height:homeCLV.bounds.height/10*3 - 5)
-            }
-            else{
-                return CGSize(width: homeCLV.bounds.width, height:530)
-            }
-        }
+    
         
         if indexPath.section == 0{
             return CGSize(width: homeCLV.bounds.width, height: 240)
         }
-        
-        return CGSize(width: homeCLV.bounds.width, height: 750)
+        if indexPath.section == 1{
+            return CGSize(width: homeCLV.bounds.width, height: 185 * 4 /*cell*/ + 50 /*Title*/ + 55 /* Button. */)
+        }
+        if indexPath.section == 2{
+            return CGSize(width: homeCLV.bounds.width, height: 237 * 1 /*cell*/ + 50 /*Title*/ )
+        }
+        if indexPath.section == 3{
+            return CGSize(width: homeCLV.bounds.width, height: 237 * 1 /*cell*/ + 50 /*Title*/ )
+
+        }
+        else {
+            return CGSize(width: homeCLV.bounds.width, height: 185 * 4 /*cell*/ + 50 /*Title*/ + 55 /* Button. */)
+        }
         
     }
     
