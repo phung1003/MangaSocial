@@ -33,6 +33,9 @@ class itemMangaModel : NSObject{
         
         if let temp = json["rate"] as? String { rate = temp}
         
+        if let temp = json["rate"] as? String { rate = temp}
+
+        
         if let temp = json["time_release"] as? String { time_release = temp }
         else if let temp = json["time_update"] as? String {time_release = temp}
 
@@ -52,7 +55,8 @@ class itemMangaModel : NSObject{
         if let temp = json["url_manga"] as? String { url_manga = temp}
         else if let temp = json["manga_link_server"] as? String {url_manga = temp}
         else if let temp = json["link_server_novel"] as? String {url_manga = temp}
-
+        
+        if let temp = json["categories"] as? String { categories = temp}
 
         if let temp = json["author"] as? String { author = temp}
         return self

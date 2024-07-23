@@ -32,9 +32,14 @@ class HomeViewController: UIViewController {
     var check = 0
     
     var serverList: OrderedDictionary<String,String> = ["0": "mangainn.net", "1": "ww5.manganelo.tv", "2": "mangareader.cc", "3": "ninemanga.com", "4": "bestlightnovel.com", "19": "azoranov.com", "6": "mangakomi.io" , "7": "readm.org", "8": "mangajar.com", "9": "swatmanga.com", "11": "novelhall.com", "12": "mto.to", "10": "mangajar.com", "5": "mangajar.com/manga", "13": "de.ninemanga.com", "14": "br.ninemanga.com", "15": "ru.ninemanga.com", "16": "es.ninemanga.com", "17": "fr.ninemanga.com", "18": "it.ninemanga.com"]
-    var webServerList: OrderedDictionary<String, String> = ["1": "ww5.manganelo.tv", "2": "mangareader.cc", "3": "ninemanga.com", "4": "bestlightnovel.com", "6": "mangakomi.io", "7": "readm.org" , "12": "mto.to", "13": "de.ninemanga.com", "14": "br.ninemanga.com", "15": "ru.ninemanga.com", "16": "es.ninemanga.com", "17": "fr.ninemanga.com", "18": "it.ninemanga.com"]
+    var webServerList: OrderedDictionary<String, String> = ["1": "ww5.manganelo.tv", "2": "mangareader.cc", "3": "ninemanga.com", "4": "bestlightnovel.com", "7": "readm.org" , "12": "mto.to", "13": "de.ninemanga.com", "14": "br.ninemanga.com", "15": "ru.ninemanga.com", "16": "es.ninemanga.com", "17": "fr.ninemanga.com", "18": "it.ninemanga.com"]
     
-    let mangaReaderCell = [1,2,2,1]
+    let mangaReader = [1,2,2,1]
+    let bestLightNovel = [1,2,2,3]
+    let novelHall = [3,2]
+    let nineManga = [3,2,2]
+    let manganelo = [1]
+    let readM = [1,2,2]
     
 //    var serverList = ["0", "1", "2", "3", "4", "19", "6", "7", "8", "9", "19", "11", "12", "13", "14", "15", "16", "17", "18"]
     let screenWidth = UIScreen.main.bounds.size.width
@@ -206,6 +211,7 @@ class HomeViewController: UIViewController {
         serverCLV.reloadData()
         
         
+        
         let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(endEdit))
         edgePan.edges = .left
         self.view.addGestureRecognizer(edgePan)
@@ -351,7 +357,34 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         if collectionView == serverCLV{
             return 1
         }
-        return 5
+        switch APIService.serverIndex {
+        case "2":
+            return mangaReader.count + 1
+        case "4":
+            return bestLightNovel.count + 1
+        case "11":
+            return novelHall.count + 1
+        case "13":
+            return nineManga.count + 1
+        case "14":
+            return nineManga.count + 1
+        case "15":
+            return nineManga.count + 1
+        case "16":
+            return nineManga.count + 1
+        case "17":
+            return nineManga.count + 1
+        case "18":
+            return nineManga.count + 1
+        case "1":
+            return manganelo.count + 1
+        case "3":
+            return nineManga.count + 1
+        case "7":
+            return readM.count + 1
+        default:
+            return mangaReader.count + 1
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -367,9 +400,91 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! TypeCell
         cell.data = data
         cell.title.text = title
+        
         cell.homeCLV.reloadData()
         return cell
     }
+    
+    fileprivate func mangaReader(_ indexPath: IndexPath, _ collectionView: UICollectionView) -> UICollectionViewCell {
+        if indexPath.section == 1 {
+            return createCell(collectionView, indexPath, "Type1CLVCell", homeData.listNewRelease, "New Release")
+        }
+        if indexPath.section == 2{
+            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listRecommended, "Recommended Manga")
+            
+        }
+        if indexPath.section == 3{
+            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listTop15, "Top 15 Manga")
+            
+        }
+        else {
+            return createCell(collectionView, indexPath, "Type1CLVCell", homeData.listCooming, "Coming Soon")
+        }
+    }
+    
+    fileprivate func bestLightNovel(_ indexPath: IndexPath, _ collectionView: UICollectionView) -> UICollectionViewCell {
+        if indexPath.section == 1 {
+            return createCell(collectionView, indexPath, "Type1CLVCell", homeData.listNewRelease, "Recently Updated Novel")
+        }
+        if indexPath.section == 2{
+            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listRecommended, "Popuplar Novel This Month")
+            
+        }
+        if indexPath.section == 3{
+            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listTop15, "Top 15 Novel")
+            
+        }
+        else {
+            return createCell(collectionView, indexPath, "Type3CLVCell", homeData.listRankWeek, "Top Weekly Novel")
+        }
+    }
+    
+    fileprivate func novelHall(_ indexPath: IndexPath, _ collectionView: UICollectionView) -> UICollectionViewCell {
+        if indexPath.section == 1 {
+            return createCell(collectionView, indexPath, "Type3CLVCell", homeData.listNewRelease, "Latest Release Novel")
+        }
+        else {
+            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listRecommended, "Recommend")
+        }
+    }
+    
+    fileprivate func nineManga(_ indexPath: IndexPath, _ collectionView: UICollectionView, _ title1: String, _ title2: String, _ title3: String) -> UICollectionViewCell {
+        if indexPath.section == 1 {
+            return createCell(collectionView, indexPath, "Type3CLVCell", homeData.listNewRelease, title1)
+        }
+        if indexPath.section == 2{
+            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listRecommended, title2)
+            
+        }
+        else {
+            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listTop15, title3)
+            
+        }
+    }
+    
+    fileprivate func manganelo(_ indexPath: IndexPath, _ collectionView: UICollectionView) -> UICollectionViewCell {
+        return createCell(collectionView, indexPath, "Type1CLVCell", homeData.listNewRelease, "LATEST MANGA")
+    }
+    
+    fileprivate func readM(_ indexPath: IndexPath, _ collectionView: UICollectionView) -> UICollectionViewCell {
+        if indexPath.section == 1 {
+            return createCell(collectionView, indexPath, "Type1CLVCell", homeData.listNewRelease, "Latest Updates")
+        }
+        if indexPath.section == 2{
+            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listRecommended, "Popular Manga")
+            
+        }
+        else {
+            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listTop15, "Hot Manga Update")
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == serverCLV {
@@ -387,31 +502,36 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             return cell
         }
         
+        switch APIService.serverIndex {
+        case "2":
+            return mangaReader(indexPath, collectionView)
+        case "4":
+            return bestLightNovel(indexPath, collectionView)
+        case "11":
+            return novelHall(indexPath, collectionView)
+        case "13":
+            return nineManga(indexPath, collectionView, "Neueste Manga Updates", "Elite", "Beliebte")
+        case "14":
+            return nineManga(indexPath, collectionView, "Últimas Atualizações Mangás", "Top Atualizar", "Top Mangás")
+        case "15":
+            return nineManga(indexPath, collectionView, "Последние", "Топ манга", "Топ манга")
+        case "16":
+            return nineManga(indexPath, collectionView, "Últimas Atualizações Mangás", "Actualizar", "Popular")
+        case "17":
+            return nineManga(indexPath, collectionView, "Dernières Mises À Jour", "Hot Update", "Hot Manga")
+        case "18":
+            return nineManga(indexPath, collectionView, "Ultimi Agiornamenti Manga", "Aggiornare", "Popolare")
+        case "1":
+            return manganelo(indexPath, collectionView)
+        case "3":
+            return nineManga(indexPath, collectionView, "Latest Manga Updates", "Hot Update", "Hot Manga")
+        case "7":
+            return readM(indexPath, collectionView)
+        default:
+            return mangaReader(indexPath, collectionView)
+        }
+  
         
-        if indexPath.section == 1 {
-//            var identifier = ""
-//            switch mangaReaderCell[indexPath.section] {
-//            case 1:
-//                identifier = "Type1CLVCell"
-//            case 2:
-//                identifier = "Type2CLVCell"
-//            default:
-//                identifier = "Type3CLVCell"
-//            }
-            
-            return createCell(collectionView, indexPath, "Type1CLVCell", homeData.listNewRelease, "New Release")
-        }
-        if indexPath.section == 2{
-            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listRecommended, "Recommended Manga")
-        
-        }
-        if indexPath.section == 3{
-            return createCell(collectionView, indexPath, "Type2CLVCell", homeData.listTop15, "Top 15 Manga")
-          
-        }
-        else {
-            return createCell(collectionView, indexPath, "Type1CLVCell", homeData.listCooming, "Coming Soon")
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -473,24 +593,59 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout{
         if collectionView == serverCLV {
             return CGSize(width: 100, height: 50)
         }
-    
+        
         
         if indexPath.section == 0{
             return CGSize(width: homeCLV.bounds.width, height: 240)
-        }
-        if indexPath.section == 1{
-            return CGSize(width: homeCLV.bounds.width, height: 185 * 4 /*cell*/ + 50 /*Title*/ + 55 /* Button. */)
-        }
-        if indexPath.section == 2{
-            return CGSize(width: homeCLV.bounds.width, height: 237 * 1 /*cell*/ + 50 /*Title*/ )
-        }
-        if indexPath.section == 3{
-            return CGSize(width: homeCLV.bounds.width, height: 237 * 1 /*cell*/ + 50 /*Title*/ )
+        } else {
+            var cellType = [Int]()
+            switch APIService.serverIndex {
+            case "2":
+                 cellType = mangaReader
+            case "4":
+                 cellType = bestLightNovel
+            case "11":
+                 cellType = novelHall
+            case "13":
+                 cellType = nineManga
+            case "14":
+                 cellType = nineManga
+            case "15":
+                 cellType = nineManga
+            case "16":
+                 cellType = nineManga
+            case "17":
+                 cellType = nineManga
+            case "18":
+                 cellType = nineManga
+            case "1":
+                 cellType = manganelo
+            case "3":
+                 cellType = nineManga
+            case "7":
+                 cellType = readM
+            default:
+                 cellType = mangaReader
+            }
+            
+            switch cellType[indexPath.section - 1] {
+            case 1:
+                if APIService.serverIndex == "1" {
+                    return CGSize(width: homeCLV.bounds.width, height: 185 * 6 /*cell*/ + 50 /*Title*/ + 52 /* Button. */)
 
+                }
+                return CGSize(width: homeCLV.bounds.width, height: 185 * 4 /*cell*/ + 50 /*Title*/ + 52 /* Button. */)
+            case 2:
+                return CGSize(width: homeCLV.bounds.width, height: 237 * 1 /*cell*/ + 50 /*Title*/ )
+            case 3:
+                return CGSize(width: homeCLV.bounds.width, height: 55 * 6 /*cell*/ + 50 /*Title*/ + 52 /* Button. */)
+            default:
+                return CGSize(width: homeCLV.bounds.width, height: 185 * 4 /*cell*/ + 50 /*Title*/ + 52 /* Button. */)
+            }
         }
-        else {
-            return CGSize(width: homeCLV.bounds.width, height: 185 * 4 /*cell*/ + 50 /*Title*/ + 55 /* Button. */)
-        }
+        
+       
+       
         
     }
     

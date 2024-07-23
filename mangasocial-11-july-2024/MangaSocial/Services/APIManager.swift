@@ -235,10 +235,29 @@ class APIService:NSObject {
         
         requestSON(url, param: nil, method: .GET, loading: true, value: "") { (data, error) in
             var homeMainReturn = HomeMangaSocialModel()
-            print(data)
             if let data2 = data as? [[String: Any]] {
                 homeMainReturn = homeMainReturn.initLoad(data2)
                 closure(homeMainReturn, error)
+            } else {
+                closure(nil, error)
+            }
+        }
+    }
+    
+    func getHomeByType(_ type: String, _ page: Int, closure: @escaping (_ response: MangaByTypeModel?, _ error: Error?) -> Void) {
+        let baseURL = "https://apimanga.mangasocial.online/\(APIService.serverIndex)"
+        let endpoint = (APIService.serverIndex == "11" || APIService.serverIndex == "4") ? "novel" : "manga"
+        var url = "\(baseURL)/\(endpoint)/\(type)/\(page)"
+        if type == "new_release_comics" {
+            url = "\(baseURL)/\(endpoint)/\(type)/\(page)/\(APIService.userId)"
+        }
+       
+        
+        requestSON(url, param: nil, method: .GET, loading: true, value: "") { (data, error) in
+            var returnData = MangaByTypeModel()
+            if let data2 = data as? [String: Any] {
+                returnData = returnData.initLoad(data2)
+                closure(returnData, nil)
             } else {
                 closure(nil, error)
             }

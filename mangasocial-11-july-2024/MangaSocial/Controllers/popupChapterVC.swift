@@ -111,6 +111,7 @@ extension popupChapterVC : UICollectionViewDelegate, UICollectionViewDataSource 
         }
         else {
             cell.time.text = ""
+            cell.chapterLb.textColor = UIColor.white
         }
         
         

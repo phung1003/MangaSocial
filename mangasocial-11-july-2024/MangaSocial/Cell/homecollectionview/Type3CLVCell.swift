@@ -11,12 +11,53 @@ class Type3CLVCell: TypeCell {
 
     @IBOutlet weak var moreBTN: UIButton!
     
+    
+    fileprivate func getType(_ parent: HomeViewController) -> String {
+        var type: String = ""
+        if data == parent.homeData.listTop15 {
+            type = "best_15_comics_week"
+        } else if data == parent.homeData.listRecent {
+            type = "recent_comics"
+        } else if data == parent.homeData.listCooming {
+            type = "cooming_soon_comics"
+        } else if data == parent.homeData.listNewRelease {
+            type = "new_release_comics"
+        } else if data == parent.homeData.listRecommended {
+            type = "recommended_comics"
+        } else if data == parent.homeData.listComedy {
+            type = "comedy_comics"
+        } else if data == parent.homeData.listFree {
+            type = "free_comics"
+        } else if data == parent.homeData.listRankMonth {
+            type = "rank_manga_month"
+        } else if data == parent.homeData.listRankWeek {
+            type = "rank_manga_week"
+        }
+        return type
+    }
+    
     @IBAction func didTapMore() {
         print("Yes")
+        if let parent = self.parentViewController as? HomeViewController{
+            
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "AllMangaVC") as! AllMangaVC
+            vc.titleText = title.text!
+            vc.dataType = getType(parent)
+            vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+            parent.present(vc, animated: true, completion: nil)
+        }
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        moreBTN.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        moreBTN.layer.cornerRadius = 8
+        moreBTN.layer.borderWidth = 1
+        moreBTN.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        moreBTN.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+
         homeCLV.register(UINib(nibName: "Type3Cell", bundle: nil), forCellWithReuseIdentifier: "Type3Cell")
         homeCLV.backgroundColor = UIColor.clear
     }
