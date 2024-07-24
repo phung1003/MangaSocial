@@ -10,6 +10,7 @@ import Kingfisher
 import RealmSwift
 import JGProgressHUD
 import GoogleMobileAds
+import Firebase
 
 class readMangaVC: UIViewController {
     
@@ -30,6 +31,9 @@ class readMangaVC: UIViewController {
         print(self.imageMangaCLV.contentOffset)
 
     }
+    
+    var screenEnterTime: Date?
+
     
     lazy var realm = try! Realm()
     
@@ -140,6 +144,7 @@ class readMangaVC: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        analyticsLogTimeUsing(screen: "readMangaVC", enterTime: screenEnterTime)
         let data = realm.objects(PageRead.self).filter("name = %@ AND idUser == %@", linkChapter, APIService.userId)
         if let data = data.first {
             try! realm.write {
@@ -176,6 +181,9 @@ class readMangaVC: UIViewController {
         super.viewDidLoad()
         viewConfig()
         fetchData()
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "readMangaVC"])
+        screenEnterTime = Date()
+
         let request = GADRequest()
         GADInterstitialAd.load(withAdUnitID:"ca-app-pub-5372862349743986/6839460573",
                                request: request,
@@ -200,6 +208,7 @@ class readMangaVC: UIViewController {
         
     }
     
+
     @objc func endEdit() {
         print("as")
         view.endEditing(true)
@@ -621,6 +630,7 @@ extension readMangaVC : UICollectionViewDelegate, UICollectionViewDataSource {
         if indexPath.section == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCommentCell", for: indexPath) as! UserCommentCell
             cell.linkChapter = linkChapter
+            print(linkChapter)
             cell.scroll = {[self] in
                 imageMangaCLV.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
             }

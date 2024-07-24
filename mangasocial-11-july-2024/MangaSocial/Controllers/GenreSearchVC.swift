@@ -8,6 +8,8 @@
 import UIKit
 import JGProgressHUD
 import GoogleMobileAds
+import Firebase
+
 class GenreSearchVC: UIViewController, GADFullScreenContentDelegate {
     
     @IBOutlet weak var topView:UIView!
@@ -23,6 +25,9 @@ class GenreSearchVC: UIViewController, GADFullScreenContentDelegate {
         self.view.endEditing(true)
     }
 
+    var screenEnterTime: Date?
+
+    
     fileprivate func loadAd() {
         if interstitial != nil && NetworkMonitor.adCount >= 4{
             NetworkMonitor.adCount = 0
@@ -55,6 +60,9 @@ class GenreSearchVC: UIViewController, GADFullScreenContentDelegate {
 
         
         super.viewDidLoad()
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "GenreSearchVC"])
+        screenEnterTime = Date()
+
         viewConfig()
         fetchData()
         if NetworkMonitor.shared.isConnected {
@@ -68,6 +76,12 @@ class GenreSearchVC: UIViewController, GADFullScreenContentDelegate {
         
         searchCLV.register(UINib(nibName: "searchCell", bundle: nil), forCellWithReuseIdentifier: "searchCell")
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "GenreSearchVC", enterTime: screenEnterTime)
+    }
+    
     func fetchData() {
         hud.show(in: self.view)
         APIService.shared.SearchGenre(content: genre){ [self] (response, error) in

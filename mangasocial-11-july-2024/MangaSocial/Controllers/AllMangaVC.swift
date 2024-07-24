@@ -7,7 +7,7 @@
 
 import UIKit
 import JGProgressHUD
-
+import Firebase
 class AllMangaVC: UIViewController {
     
     @IBOutlet weak var titleLB: UILabel!
@@ -17,6 +17,9 @@ class AllMangaVC: UIViewController {
     var data = MangaByTypeModel()
     var dataType: String = ""
     var curPage = 1
+    
+    var screenEnterTime: Date?
+
     let hud = JGProgressHUD()
 
     
@@ -61,11 +64,20 @@ class AllMangaVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "AllMangaVC"])
+        screenEnterTime = Date()
+
         allMangaCLV.register(UINib(nibName: "Type1Cell", bundle: nil), forCellWithReuseIdentifier: "Type1Cell")
         allMangaCLV.register(UINib(nibName: "PageNavigationCell", bundle: nil), forCellWithReuseIdentifier: "PageNavigationCell")
 
         viewConfig()
         fetchData(page: curPage)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "AllMangaVC", enterTime: screenEnterTime)
     }
     
     func showAlert(title: String, message: String) {
@@ -103,6 +115,8 @@ extension AllMangaVC : UICollectionViewDelegate, UICollectionViewDataSource{
                 } else {
                     fetchData(page: curPage+1)
                     curPage = curPage+1
+                    cell.pageLb.text = "Page \(curPage)"
+
                 }
             }
             
@@ -112,7 +126,6 @@ extension AllMangaVC : UICollectionViewDelegate, UICollectionViewDataSource{
                 } else {
                     fetchData(page: curPage-1)
                     curPage = curPage-1
-                    cell.pageLb.text = "Page \(curPage)"
                     cell.pageLb.text = "Page \(curPage)"
 
                 }

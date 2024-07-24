@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 class UserProfileVC: UIViewController {
     @IBOutlet weak var avatar: UIImageView!
@@ -19,6 +21,9 @@ class UserProfileVC: UIViewController {
         avatar.makeRounded()
         setGradientBackground()
     }
+    
+    var screenEnterTime: Date?
+
     
     func setGradientBackground() {
 
@@ -57,6 +62,14 @@ class UserProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "UserProfileVC"])
+        screenEnterTime = Date()
+
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "UserProfileVC", enterTime: screenEnterTime)
     }
     
     @IBAction func didTapEdit(){

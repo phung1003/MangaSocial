@@ -9,6 +9,7 @@ import UIKit
 import RealmSwift
 import GoogleMobileAds
 import Kingfisher
+import Firebase
 
 class ProfileVC: UIViewController, GADFullScreenContentDelegate {
     
@@ -22,6 +23,9 @@ class ProfileVC: UIViewController, GADFullScreenContentDelegate {
     var interstitial: GADInterstitialAd?
     
     var profile = ProfileModel()
+    
+    var screenEnterTime: Date?
+
     fileprivate func loadAd() {
         if interstitial != nil && NetworkMonitor.adCount >= 4{
             NetworkMonitor.adCount = 0
@@ -61,8 +65,16 @@ class ProfileVC: UIViewController, GADFullScreenContentDelegate {
         )
 
         super.viewDidLoad()
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "ProfileVC"])
+        screenEnterTime = Date()
+
         
         
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "ProfileVC", enterTime: screenEnterTime)
     }
     
     func fetchData(){

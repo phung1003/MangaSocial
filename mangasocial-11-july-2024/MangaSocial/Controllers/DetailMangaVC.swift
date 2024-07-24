@@ -10,6 +10,7 @@ import RealmSwift
 import JGProgressHUD
 import GoogleMobileAds
 import Kingfisher
+import Firebase
 
 class DetailMangaVC: UIViewController {
    // @IBOutlet weak var chapterCLV:UICollectionView!
@@ -42,6 +43,9 @@ class DetailMangaVC: UIViewController {
     lazy var realm = try! Realm()
     
     var isSave = false
+    
+    var screenEnterTime: Date?
+
     
     let hud = JGProgressHUD()
     
@@ -91,7 +95,10 @@ class DetailMangaVC: UIViewController {
     
     
     override func viewDidLoad() {
-      let request = GADRequest()
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "DetailMangaVC"])
+        screenEnterTime = Date()
+
+        let request = GADRequest()
         GADInterstitialAd.load(withAdUnitID:"ca-app-pub-5372862349743986/6839460573",
                                request: request,
                                completionHandler: { [self] ad, error in
@@ -103,23 +110,23 @@ class DetailMangaVC: UIViewController {
             interstitial?.fullScreenContentDelegate = self
         }
         )
-
+        
         
         super.viewDidLoad()
         if NetworkMonitor.shared.isConnected {
             print("You're on connected")
         }else{
-//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
-//            vc.modalPresentationStyle = .fullScreen
-//            self.present(vc, animated: false, completion: nil)
-//            return
+            //            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
+            //            vc.modalPresentationStyle = .fullScreen
+            //            self.present(vc, animated: false, completion: nil)
+            //            return
         }
         
-      
+        
         
         viewConfig()
         fetchData()
-      //  chapterCLV.register(UINib(nibName: "chapterCell", bundle: nil), forCellWithReuseIdentifier: "chapterCell")
+        //  chapterCLV.register(UINib(nibName: "chapterCell", bundle: nil), forCellWithReuseIdentifier: "chapterCell")
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -154,6 +161,11 @@ class DetailMangaVC: UIViewController {
 //            isSave = true
 //        }
 //    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "DetailMangaVC", enterTime: screenEnterTime)
+    }
     
     private func viewConfig(){
         setGradientBackground()

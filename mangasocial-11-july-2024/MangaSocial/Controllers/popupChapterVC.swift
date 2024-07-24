@@ -24,6 +24,9 @@ class popupChapterVC: UIViewController {
     var mode = 0
     
     var realm = try! Realm()
+    
+
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()

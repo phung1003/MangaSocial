@@ -7,6 +7,7 @@
 
 import UIKit
 import JGProgressHUD
+import Firebase
 class SignupVC: UIViewController {
 
     @IBOutlet weak var emailTf: UITextField!
@@ -17,7 +18,12 @@ class SignupVC: UIViewController {
     @IBOutlet weak var login: UILabel!
     
     var hud = JGProgressHUD()
+    var screenEnterTime: Date?
+
     override func viewDidLoad() {
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "SignupVC"])
+        screenEnterTime = Date()
+
         super.viewDidLoad()
         viewConfig()
         // Do any additional setup after loading the view.
@@ -27,6 +33,10 @@ class SignupVC: UIViewController {
         login.addGestureRecognizer(tap)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "SignupVC", enterTime: screenEnterTime)
+    }
 
     
     func showAlert(message: String) {

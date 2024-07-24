@@ -10,6 +10,7 @@ import Kingfisher
 import RealmSwift
 import JGProgressHUD
 import GoogleMobileAds
+import Firebase
 
 class ReadNovelVC: UIViewController, GADFullScreenContentDelegate {
 
@@ -34,6 +35,8 @@ class ReadNovelVC: UIViewController, GADFullScreenContentDelegate {
     var editIndex = -1
     var profile = ProfileModel()
     
+    var screenEnterTime: Date?
+
     func maxContentOffset(scrollView: UIScrollView) -> CGPoint {
         var y = (scrollView.contentSize.height - scrollView.bounds.height + scrollView.contentInset.bottom)
         if y < 0 {
@@ -159,6 +162,9 @@ class ReadNovelVC: UIViewController, GADFullScreenContentDelegate {
 //
     override func viewDidLoad() {
         super.viewDidLoad()
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "ReadNovelVC"])
+        screenEnterTime = Date()
+
         viewConfig()
         fetchData()
         let request = GADRequest()
@@ -184,6 +190,11 @@ class ReadNovelVC: UIViewController, GADFullScreenContentDelegate {
         edgePan.edges = .left
         self.view.addGestureRecognizer(edgePan)
         
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "ReadNovelVC", enterTime: screenEnterTime)
     }
     
     @objc func endEdit() {

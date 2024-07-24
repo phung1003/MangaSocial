@@ -11,6 +11,8 @@ target 'MangaSocial' do
   pod 'JGProgressHUD'
   pod 'Google-Mobile-Ads-SDK'
   pod 'CryptoSwift'
+  pod 'GoogleAnalytics'
+  pod 'Firebase/Analytics'
 end
 
 post_install do |installer|

@@ -9,6 +9,7 @@ import UIKit
 
 import UIKit
 import JGProgressHUD
+import Firebase
 class ForgotPasswordVC: UIViewController {
 
     @IBOutlet weak var emailTf: UITextField!
@@ -17,15 +18,23 @@ class ForgotPasswordVC: UIViewController {
     @IBOutlet weak var forgotBtn:UIButton!
     
     var hud = JGProgressHUD()
+    var screenEnterTime: Date?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "ForgotPasswordVC"])
+        screenEnterTime = Date()
+
         viewConfig()
         // Do any additional setup after loading the view.
         
 
     }
     
-
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "ForgotPasswordVC", enterTime: screenEnterTime)
+    }
     
     func showAlert(message: String) {
         let alert = UIAlertController(title: message, message: "", preferredStyle: .alert)

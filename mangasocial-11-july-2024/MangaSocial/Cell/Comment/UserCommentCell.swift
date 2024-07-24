@@ -70,7 +70,7 @@ class UserCommentCell: UICollectionViewCell, UITextViewDelegate {
             textView.text = nil
             textView.textColor = UIColor.white
             postComment.isEnabled = true
-        }
+        } 
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

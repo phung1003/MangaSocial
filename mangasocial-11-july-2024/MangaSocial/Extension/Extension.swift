@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 extension String {
     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
@@ -170,3 +171,14 @@ func colorFromHex(hex: String) -> UIColor {
 
 // Sử dụng hàm để tạo UIColor từ mã hex
 
+extension UIViewController{
+    func analyticsLogTimeUsing(screen: String, enterTime: Date?) {
+        if let enterTime = enterTime {
+            let timeSpent = Date().timeIntervalSince(enterTime)
+            Analytics.logEvent("time_spent_on_screen", parameters: [
+                "time_spent_on": "\(screen): \(timeSpent/60) minutes"
+            ])
+        }
+    }
+    
+}

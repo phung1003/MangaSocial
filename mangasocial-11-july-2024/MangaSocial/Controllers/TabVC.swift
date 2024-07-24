@@ -9,6 +9,7 @@ import UIKit
 import RealmSwift
 import JGProgressHUD
 import GoogleMobileAds
+import Firebase
 
 class TabVC: UIViewController {
     
@@ -21,6 +22,9 @@ class TabVC: UIViewController {
     @IBOutlet weak var newBtn:UIButton!
     
     @IBOutlet weak var pageLb:UILabel!
+    
+    var screenEnterTime: Date?
+
     
     var TabView = ""
     var homeData = HomeMangaSocialModel()
@@ -63,16 +67,26 @@ class TabVC: UIViewController {
         mangaArray.removeAll()
         switch (TabView) {
         case ("Coming"):
+            Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "TabVCComing"])
+            screenEnterTime = Date()
+
             mangaArray = homeData.listCooming
             tabViewDisplay(t2: true, t3: false, t4: false)
 
             break
         case ("Rank Week"):
+            Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "TabVCRankWeek"])
+            screenEnterTime = Date()
+
             mangaArray = homeData.listRankWeek
+            
             tabViewDisplay(t2: false, t3: true, t4: false)
 
             break
         case("Rank Month"):
+            Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "TabVCComingRankMonth"])
+            screenEnterTime = Date()
+
             mangaArray = homeData.listRankMonth
             tabViewDisplay(t2: false, t3: false, t4: true)
 
@@ -98,6 +112,11 @@ class TabVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         loadAd()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "TabVC", enterTime: screenEnterTime)
     }
     
     override func viewDidLoad() {

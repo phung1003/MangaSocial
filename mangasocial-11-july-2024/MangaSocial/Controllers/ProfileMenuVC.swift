@@ -8,6 +8,8 @@
 import UIKit
 import Kingfisher
 import JGProgressHUD
+import Firebase
+
 
 class ProfileMenuVC: UIViewController {
 
@@ -24,6 +26,9 @@ class ProfileMenuVC: UIViewController {
     let hud = JGProgressHUD()
     
     var profile = ProfileModel()
+    
+    var screenEnterTime: Date?
+
     
     func viewConfig() {
         self.hud.style = .dark
@@ -142,12 +147,20 @@ class ProfileMenuVC: UIViewController {
     }
     
     override func viewDidLoad() {
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "ProfileMenuVC"])
+        screenEnterTime = Date()
+
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         fetchData()
         viewConfig()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "ProfileMenuVC", enterTime: screenEnterTime)
     }
     
     @IBAction func didTapchangeMode() {

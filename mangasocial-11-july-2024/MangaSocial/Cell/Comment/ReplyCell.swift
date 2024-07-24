@@ -86,6 +86,8 @@ class ReplyCell: UICollectionViewCell, UITextViewDelegate {
             textView.text = "Post your comment"
             textView.textColor = UIColor.lightGray
             postComment.isEnabled = false
+        } else {
+            postComment.isEnabled = true
         }
     }
     

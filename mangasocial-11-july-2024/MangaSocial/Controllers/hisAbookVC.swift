@@ -8,6 +8,8 @@
 import UIKit
 import RealmSwift
 import GoogleMobileAds
+import Firebase
+
 
 protocol ContainerToMaster {
     func changeTab(text:String)
@@ -22,6 +24,9 @@ class hisAbookVC: UIViewController, GADFullScreenContentDelegate {
     var type = ""
     var historyArray = [HistoryManga]()
     var bookMarkArray = [BookmarkManga]()
+    
+    var screenEnterTime: Date?
+
     
     lazy var realm = try! Realm()
     
@@ -67,6 +72,8 @@ class hisAbookVC: UIViewController, GADFullScreenContentDelegate {
             interstitial?.fullScreenContentDelegate = self
         }
         )
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "hisAbookVC"])
+        screenEnterTime = Date()
 
         super.viewDidLoad()
         self.view.layer.cornerRadius = 8
@@ -74,6 +81,11 @@ class hisAbookVC: UIViewController, GADFullScreenContentDelegate {
         hisAbookCLV.register(UINib(nibName: "mangaCell", bundle: nil), forCellWithReuseIdentifier: "mangaCell")
         
     
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "hisAbookVC", enterTime: screenEnterTime)
     }
     
     private func fetchData(){

@@ -7,6 +7,7 @@
 
 import UIKit
 import JGProgressHUD
+import Firebase
 
 class EditProfileVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var username: UITextField!
@@ -25,6 +26,9 @@ class EditProfileVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, 
     var hud = JGProgressHUD()
     var userProfile = ProfileModel()
     
+    var screenEnterTime: Date?
+
+    
     let attribute:[NSAttributedString.Key: Any] = [
         .font: UIFont.systemFont(ofSize: 14),  // Set the font
         .foregroundColor: UIColor.white,             // Set the text color
@@ -32,6 +36,10 @@ class EditProfileVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "EditProfileVC"])
+        screenEnterTime = Date()
+
         
         username.delegate = self
         job.delegate = self
@@ -47,6 +55,11 @@ class EditProfileVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, 
         self.view.addGestureRecognizer(edgePan)
         
         avatar.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(pickImage)))
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "EditProfileVC", enterTime: screenEnterTime)
     }
     
     override func viewDidAppear(_ animated: Bool) {

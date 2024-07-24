@@ -138,6 +138,7 @@
 		B7EF99AC2C4E5CA400FC183E /* PageNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF99AA2C4E5CA400FC183E /* PageNavigationCell.swift */; };
 		B7EF99AD2C4E5CA400FC183E /* PageNavigationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7EF99AB2C4E5CA400FC183E /* PageNavigationCell.xib */; };
 		B7EF99AF2C4E62BF00FC183E /* PopupPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF99AE2C4E62BF00FC183E /* PopupPageVC.swift */; };
+		B7F70C802C50F04F004F96D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7F70C7F2C50F04F004F96D1 /* GoogleService-Info.plist */; };
 		E1DBC0DDAAF5297ED4DEBE48 /* Pods_MangaSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72AF27E1C7658709BA3A734 /* Pods_MangaSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -271,6 +272,8 @@
 		B7EF99AA2C4E5CA400FC183E /* PageNavigationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageNavigationCell.swift; sourceTree = "<group>"; };
 		B7EF99AB2C4E5CA400FC183E /* PageNavigationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageNavigationCell.xib; sourceTree = "<group>"; };
 		B7EF99AE2C4E62BF00FC183E /* PopupPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupPageVC.swift; sourceTree = "<group>"; };
+		B7F70C7A2C50E48E004F96D1 /* MangaSocial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MangaSocial-Bridging-Header.h"; sourceTree = "<group>"; };
+		B7F70C7F2C50F04F004F96D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CED1A5660EAC4DE09DAFD3E8 /* Pods-MangaSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MangaSocial.debug.xcconfig"; path = "Target Support Files/Pods-MangaSocial/Pods-MangaSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		DA227E7D483ACDFB8B09BD54 /* Pods-MangaSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MangaSocial.release.xcconfig"; path = "Target Support Files/Pods-MangaSocial/Pods-MangaSocial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -307,6 +310,7 @@
 				B720F6F42B524BC00043442A /* Products */,
 				F8EC886FFF2D25A9503DEC0A /* Pods */,
 				142CB6BA3F69495C41E80429 /* Frameworks */,
+				B7F70C7A2C50E48E004F96D1 /* MangaSocial-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -321,6 +325,7 @@
 		B720F6F52B524BC00043442A /* MangaSocial */ = {
 			isa = PBXGroup;
 			children = (
+				B7F70C7F2C50F04F004F96D1 /* GoogleService-Info.plist */,
 				B720F6F62B524BC00043442A /* AppDelegate.swift */,
 				B720F6F82B524BC00043442A /* SceneDelegate.swift */,
 				B720F7042B524BC10043442A /* Info.plist */,
@@ -606,6 +611,7 @@
 				TargetAttributes = {
 					B720F6F22B524BC00043442A = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
 					};
 				};
 			};
@@ -646,6 +652,7 @@
 				B797F6B12B6398BB00C5D84D /* NovelCell.xib in Resources */,
 				B720F7902B524BED0043442A /* imageMangaCell.xib in Resources */,
 				B7EF99AD2C4E5CA400FC183E /* PageNavigationCell.xib in Resources */,
+				B7F70C802C50F04F004F96D1 /* GoogleService-Info.plist in Resources */,
 				B7ED86A22C4A406400952F70 /* Type2Cell.xib in Resources */,
 				B720F79B2B524BF90043442A /* LaunchScreen.storyboard in Resources */,
 				B720F7942B524BED0043442A /* searchCell.xib in Resources */,
@@ -944,6 +951,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -970,6 +978,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = mangaPro;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MangaSocial-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -981,6 +991,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -1007,6 +1018,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = mangaPro;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MangaSocial-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

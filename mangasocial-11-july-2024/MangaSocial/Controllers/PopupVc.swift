@@ -24,6 +24,7 @@ class PopupVc: UIViewController {
 
     }
     
+    
    
    
     @objc func didTapHistory(){

@@ -10,6 +10,7 @@ import Kingfisher
 import JGProgressHUD
 import GoogleMobileAds
 import OrderedCollections
+import Firebase
 
 class HomeViewController: UIViewController {
     
@@ -34,12 +35,16 @@ class HomeViewController: UIViewController {
     var serverList: OrderedDictionary<String,String> = ["0": "mangainn.net", "1": "ww5.manganelo.tv", "2": "mangareader.cc", "3": "ninemanga.com", "4": "bestlightnovel.com", "19": "azoranov.com", "6": "mangakomi.io" , "7": "readm.org", "8": "mangajar.com", "9": "swatmanga.com", "11": "novelhall.com", "12": "mto.to", "10": "mangajar.com", "5": "mangajar.com/manga", "13": "de.ninemanga.com", "14": "br.ninemanga.com", "15": "ru.ninemanga.com", "16": "es.ninemanga.com", "17": "fr.ninemanga.com", "18": "it.ninemanga.com"]
     var webServerList: OrderedDictionary<String, String> = ["1": "ww5.manganelo.tv", "2": "mangareader.cc", "3": "ninemanga.com", "4": "bestlightnovel.com", "7": "readm.org" , "12": "mto.to", "13": "de.ninemanga.com", "14": "br.ninemanga.com", "15": "ru.ninemanga.com", "16": "es.ninemanga.com", "17": "fr.ninemanga.com", "18": "it.ninemanga.com"]
     
+    var screenEnterTime: Date?
+
+    
     let mangaReader = [1,2,2,1]
     let bestLightNovel = [1,2,2,3]
     let novelHall = [3,2]
     let nineManga = [3,2,2]
     let manganelo = [1]
     let readM = [1,2,2]
+    
     
 //    var serverList = ["0", "1", "2", "3", "4", "19", "6", "7", "8", "9", "19", "11", "12", "13", "14", "15", "16", "17", "18"]
     let screenWidth = UIScreen.main.bounds.size.width
@@ -171,12 +176,17 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+
+        
         if let storedValue = UserDefaults.standard.string(forKey: "server") {
             APIService.serverIndex = storedValue
         } else {
             APIService.serverIndex = "2"
         }
-    
+        
+     
+
         
         let request = GADRequest()
         GADInterstitialAd.load(withAdUnitID:"ca-app-pub-5372862349743986/6839460573",
@@ -195,7 +205,9 @@ class HomeViewController: UIViewController {
         viewConfig()
         
 
-        super.viewDidLoad()
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "HomeViewController"])
+        screenEnterTime = Date()
+
         
         homeCLV.register(UINib(nibName: "HomeRecentCLVCell", bundle: nil), forCellWithReuseIdentifier: "HomeRecentCLVCell")
         homeCLV.register(UINib(nibName: "HomeRecommendedCLVCell", bundle: nil), forCellWithReuseIdentifier: "HomeRecommendedCLVCell")
@@ -217,6 +229,12 @@ class HomeViewController: UIViewController {
         self.view.addGestureRecognizer(edgePan)
         
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "HomeViewController", enterTime: screenEnterTime)
+    }
+    
     
     @objc func endEdit() {
         view.endEditing(true)
@@ -539,6 +557,8 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
 //            serverBtn.backgroundColor = .clear
 //            serverImage.backgroundColor = .clear
             var keys = Array(serverList.keys)
+            Analytics.logEvent("choose_server", parameters: nil)
+
             serverImage.image = UIImage(named: keys[indexPath.row])
             serverCLV.isHidden = true
             APIService.serverIndex = keys[indexPath.row]

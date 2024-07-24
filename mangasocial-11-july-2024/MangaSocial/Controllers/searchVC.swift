@@ -8,6 +8,8 @@
 import UIKit
 import JGProgressHUD
 import GoogleMobileAds
+import Firebase
+
 
 class searchVC: UIViewController, GADFullScreenContentDelegate {
     
@@ -20,6 +22,9 @@ class searchVC: UIViewController, GADFullScreenContentDelegate {
     var textFind = ""
     
     var interstitial: GADInterstitialAd?
+    
+    var screenEnterTime: Date?
+
     
     let hud = JGProgressHUD()
     
@@ -44,6 +49,7 @@ class searchVC: UIViewController, GADFullScreenContentDelegate {
     }
 
     override func viewDidLoad() {
+        
       let request = GADRequest()
         GADInterstitialAd.load(withAdUnitID:"ca-app-pub-5372862349743986/6839460573",
                                request: request,
@@ -60,6 +66,9 @@ class searchVC: UIViewController, GADFullScreenContentDelegate {
         
         super.viewDidLoad()
         viewConfig()
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "searchVC"])
+        screenEnterTime = Date()
+
         
         if NetworkMonitor.shared.isConnected {
             print("You're on connected")
@@ -76,6 +85,11 @@ class searchVC: UIViewController, GADFullScreenContentDelegate {
                 findText(text: textFind)
             }
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "searchVC", enterTime: screenEnterTime)
     }
     
     func fetchData() {

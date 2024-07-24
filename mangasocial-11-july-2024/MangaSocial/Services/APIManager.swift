@@ -267,7 +267,6 @@ class APIService:NSObject {
     func getDetailManga(link: String, closure: @escaping (_ response: DetailManga?, _ error: Error?) -> Void){
         print(link)
         requestSON(link , param: nil, method: .GET, loading: true, value: "") { (data, error) in
-            print(data)
             var returnData:DetailManga = DetailManga()
             if let data2 = data as? [[String : Any]]{
                 if let item = data2.first {
@@ -616,17 +615,12 @@ class APIService:NSObject {
     
     
     
-    public func getSecondLastPathComponent(from urlString: String) -> String? {
-        guard let url = URL(string: urlString),
-              let pathComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)?.path.components(separatedBy: "/") else {
-            return nil
-        }
-        
-        if pathComponents.count >= 2 {
-            return pathComponents[pathComponents.count - 2]
-        } else {
-            return nil
-        }
+    func getSecondLastPathComponent(from link: String) -> String? {
+        guard let url = URL(string: link) else { return nil }
+        let components = url.pathComponents
+        var temp = components.dropLast().last
+        temp  = temp!.replacingOccurrences(of: " ", with: "%20")
+        return temp
     }
     
     func deleteMethod(link: String, completion: @escaping ([String: Any]?, Error?) -> Void) {

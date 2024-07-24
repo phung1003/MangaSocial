@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 @main
  class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +14,14 @@ import UIKit
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
+        guard let gai = GAI.sharedInstance() else{
+            assert(false, "Google Analytics not configured correctly")
+        }
+        gai.tracker(withTrackingId: "8502248484")
+        gai.trackUncaughtExceptions = true
+        gai.logger.logLevel = .verbose
+        
         return true
     }
    

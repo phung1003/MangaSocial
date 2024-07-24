@@ -10,6 +10,8 @@ import Kingfisher
 import JGProgressHUD
 import RealmSwift
 import GoogleMobileAds
+import Firebase
+
 
 class GenresVC: UIViewController, GADFullScreenContentDelegate {
     
@@ -25,6 +27,8 @@ class GenresVC: UIViewController, GADFullScreenContentDelegate {
     
     let hud = JGProgressHUD()
     
+    var screenEnterTime: Date?
+
     
     lazy var realm = try! Realm()
     
@@ -60,7 +64,9 @@ class GenresVC: UIViewController, GADFullScreenContentDelegate {
         }
         )
 
-        
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "GenresVC"])
+        screenEnterTime = Date()
+
         super.viewDidLoad()
         
         if NetworkMonitor.shared.isConnected {
@@ -81,6 +87,11 @@ class GenresVC: UIViewController, GADFullScreenContentDelegate {
         genresCLV.register(UINib(nibName: "genresCell", bundle: nil), forCellWithReuseIdentifier: "genresCell")
         genresCLV.register(UINib(nibName: "genresTitleCell", bundle: nil), forCellWithReuseIdentifier: "genresTitleCell")
         genresCLV.register(UINib(nibName: "mangaCell", bundle: nil), forCellWithReuseIdentifier: "mangaCell")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "GenresVC", enterTime: screenEnterTime)
     }
     
     func setGradientBackground() {
@@ -230,6 +241,7 @@ class GenresVC: UIViewController, GADFullScreenContentDelegate {
         APIService.shared.getAllGenre{ [self](data, error) in
             if let data = data {
                 genresList = data
+                genresList = genresList.filter { $0.category_name != "Adult" }
                 genresCLV.reloadData()
             }
         }

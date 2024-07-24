@@ -7,6 +7,8 @@
 
 import UIKit
 import JGProgressHUD
+import Firebase
+
 
 class LoginVC: UIViewController {
 
@@ -17,6 +19,8 @@ class LoginVC: UIViewController {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var forgot: UILabel!
     var hud = JGProgressHUD()
+    var screenEnterTime: Date?
+
     
     override func viewDidAppear(_ animated: Bool) {
         if let storedValue = UserDefaults.standard.string(forKey: "id_user")
@@ -38,11 +42,19 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         viewConfig()
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "LoginVC"])
+        screenEnterTime = Date()
+
         forgot.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(forgotHandler(_:)))
         forgot.addGestureRecognizer(tap)
         super.viewDidLoad()
        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "LoginVC", enterTime: screenEnterTime)
     }
     
     fileprivate func login(email: String, password: String) {

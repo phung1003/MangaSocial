@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMobileAds
+import Firebase
 
 class ViewController2: UIViewController, GADFullScreenContentDelegate {
     
@@ -26,6 +27,8 @@ class ViewController2: UIViewController, GADFullScreenContentDelegate {
     var item = ""
     var interstitial: GADInterstitialAd?
     
+    var screenEnterTime: Date?
+
 
     var containerViewController: hisAbookVC?
     
@@ -61,6 +64,9 @@ class ViewController2: UIViewController, GADFullScreenContentDelegate {
 
         
         super.viewDidLoad()
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "ViewController2"])
+        screenEnterTime = Date()
+
         viewConfig()
        
         
@@ -76,6 +82,11 @@ class ViewController2: UIViewController, GADFullScreenContentDelegate {
         
         historyTab.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(historyTabClick)))
         bookMarkTab.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(bookmarkTabClick)))
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "ViewController2", enterTime: screenEnterTime)
     }
     
     private func viewConfig(){

@@ -1,6 +1,7 @@
 
 
 import UIKit
+import Firebase
 
 class readNovelOffVC: UIViewController {
     
@@ -11,14 +12,23 @@ class readNovelOffVC: UIViewController {
     
     var dataSources = [SaveChapterModel]()
     
+    var screenEnterTime: Date?
+
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        print(dataSources)
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "readNovelOffVC"])
+        screenEnterTime = Date()
+
         viewConfig()
         offlineCLV.register(UINib(nibName: "NovelCell", bundle: nil), forCellWithReuseIdentifier: "NovelCell")
         offlineCLV.register(UINib(nibName: "headerOffReadMangaCell", bundle: nil), forCellWithReuseIdentifier: "headerOffReadMangaCell")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "readNovelOffVC", enterTime: screenEnterTime)
     }
     
     private func viewConfig(){

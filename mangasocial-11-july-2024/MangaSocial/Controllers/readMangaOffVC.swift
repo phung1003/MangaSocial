@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class readMangaOffVC: UIViewController {
     
@@ -19,14 +20,25 @@ class readMangaOffVC: UIViewController {
     
     var initDatas: [PhotoItem] = []
     var dataSources: [PhotoItem] = []
+    
+    var screenEnterTime: Date?
+
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "readMangaOffVC"])
+        screenEnterTime = Date()
+
         viewConfig()
         fetchData()
         offlineCLV.register(UINib(nibName: "imageMangaCell", bundle: nil), forCellWithReuseIdentifier: "imageMangaCell")
         offlineCLV.register(UINib(nibName: "headerOffReadMangaCell", bundle: nil), forCellWithReuseIdentifier: "headerOffReadMangaCell")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        analyticsLogTimeUsing(screen: "readMangaOffVC", enterTime: screenEnterTime)
     }
     
     private func viewConfig(){
