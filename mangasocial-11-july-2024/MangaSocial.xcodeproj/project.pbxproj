@@ -118,6 +118,7 @@
 		B7BBD5E52C49197900B34DC9 /* Type1CLVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7BBD5E32C49197900B34DC9 /* Type1CLVCell.xib */; };
 		B7BBD5E92C491A7000B34DC9 /* Type1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BBD5E72C491A7000B34DC9 /* Type1Cell.swift */; };
 		B7BBD5EA2C491A7000B34DC9 /* Type1Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7BBD5E82C491A7000B34DC9 /* Type1Cell.xib */; };
+		B7C6265D2C5A05C400177BAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7C6265C2C5A05C400177BAE /* GoogleService-Info.plist */; };
 		B7CBE2252B59228A00D333CC /* PageRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CBE2242B59228A00D333CC /* PageRead.swift */; };
 		B7CBE2292B5A538B00D333CC /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CBE2272B5A538B00D333CC /* RecentCell.swift */; };
 		B7CBE22A2B5A538B00D333CC /* RecentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7CBE2282B5A538B00D333CC /* RecentCell.xib */; };
@@ -138,7 +139,6 @@
 		B7EF99AC2C4E5CA400FC183E /* PageNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF99AA2C4E5CA400FC183E /* PageNavigationCell.swift */; };
 		B7EF99AD2C4E5CA400FC183E /* PageNavigationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7EF99AB2C4E5CA400FC183E /* PageNavigationCell.xib */; };
 		B7EF99AF2C4E62BF00FC183E /* PopupPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF99AE2C4E62BF00FC183E /* PopupPageVC.swift */; };
-		B7F70C802C50F04F004F96D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7F70C7F2C50F04F004F96D1 /* GoogleService-Info.plist */; };
 		E1DBC0DDAAF5297ED4DEBE48 /* Pods_MangaSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72AF27E1C7658709BA3A734 /* Pods_MangaSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -252,6 +252,7 @@
 		B7BBD5E32C49197900B34DC9 /* Type1CLVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Type1CLVCell.xib; sourceTree = "<group>"; };
 		B7BBD5E72C491A7000B34DC9 /* Type1Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type1Cell.swift; sourceTree = "<group>"; };
 		B7BBD5E82C491A7000B34DC9 /* Type1Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Type1Cell.xib; sourceTree = "<group>"; };
+		B7C6265C2C5A05C400177BAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7CBE2242B59228A00D333CC /* PageRead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageRead.swift; sourceTree = "<group>"; };
 		B7CBE2272B5A538B00D333CC /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
 		B7CBE2282B5A538B00D333CC /* RecentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentCell.xib; sourceTree = "<group>"; };
@@ -273,7 +274,6 @@
 		B7EF99AB2C4E5CA400FC183E /* PageNavigationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageNavigationCell.xib; sourceTree = "<group>"; };
 		B7EF99AE2C4E62BF00FC183E /* PopupPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupPageVC.swift; sourceTree = "<group>"; };
 		B7F70C7A2C50E48E004F96D1 /* MangaSocial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MangaSocial-Bridging-Header.h"; sourceTree = "<group>"; };
-		B7F70C7F2C50F04F004F96D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CED1A5660EAC4DE09DAFD3E8 /* Pods-MangaSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MangaSocial.debug.xcconfig"; path = "Target Support Files/Pods-MangaSocial/Pods-MangaSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		DA227E7D483ACDFB8B09BD54 /* Pods-MangaSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MangaSocial.release.xcconfig"; path = "Target Support Files/Pods-MangaSocial/Pods-MangaSocial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -325,8 +325,8 @@
 		B720F6F52B524BC00043442A /* MangaSocial */ = {
 			isa = PBXGroup;
 			children = (
-				B7F70C7F2C50F04F004F96D1 /* GoogleService-Info.plist */,
 				B720F6F62B524BC00043442A /* AppDelegate.swift */,
+				B7C6265C2C5A05C400177BAE /* GoogleService-Info.plist */,
 				B720F6F82B524BC00043442A /* SceneDelegate.swift */,
 				B720F7042B524BC10043442A /* Info.plist */,
 				B720F70A2B524BEC0043442A /* Assets.xcassets */,
@@ -652,7 +652,7 @@
 				B797F6B12B6398BB00C5D84D /* NovelCell.xib in Resources */,
 				B720F7902B524BED0043442A /* imageMangaCell.xib in Resources */,
 				B7EF99AD2C4E5CA400FC183E /* PageNavigationCell.xib in Resources */,
-				B7F70C802C50F04F004F96D1 /* GoogleService-Info.plist in Resources */,
+				B7C6265D2C5A05C400177BAE /* GoogleService-Info.plist in Resources */,
 				B7ED86A22C4A406400952F70 /* Type2Cell.xib in Resources */,
 				B720F79B2B524BF90043442A /* LaunchScreen.storyboard in Resources */,
 				B720F7942B524BED0043442A /* searchCell.xib in Resources */,
