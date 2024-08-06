@@ -241,7 +241,8 @@ class GenresVC: UIViewController, GADFullScreenContentDelegate {
         APIService.shared.getAllGenre{ [self](data, error) in
             if let data = data {
                 genresList = data
-                genresList = genresList.filter { $0.category_name != "Adult" }
+                genresList = genresList.filter { $0.category_name != "Adult" && $0.category_name != "Gender Bender" && $0.category_name != "Harem" }
+
                 genresCLV.reloadData()
             }
         }

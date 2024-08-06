@@ -174,8 +174,8 @@ class ProfileMenuVC: UIViewController {
                 
                 if !APIService.webMode {
                     if !vc.webServerList.keys.contains(APIService.serverIndex) {
-                        APIService.serverIndex = "3"
-                        UserDefaults.standard.set("3", forKey: "server")
+                        APIService.serverIndex = "2"
+                        UserDefaults.standard.set("2", forKey: "server")
                     }
                 }
                 vc.modalPresentationStyle = .fullScreen
