@@ -229,14 +229,15 @@ extension searchVC : UICollectionViewDelegate, UICollectionViewDataSource{
         let object = fillerData[indexPath.row]
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailMangaVC") as! DetailMangaVC
         vc.modalPresentationStyle = .fullScreen
-        if let name = URL(string: fillerData[indexPath.row].id_manga)?.lastPathComponent{
+        vc.linkManga = fillerData[indexPath.row].id_manga
+//        if let name = URL(string: fillerData[indexPath.row].id_manga)?.lastPathComponent{
 //            if APIService.webMode {
-                vc.linkManga = "https://apimanga.mangasocial.online/web/rmanga/\(APIService.serverIndex)/\(name)"
+//                vc.linkManga = "https://apimanga.mangasocial.online/web/rmanga/\(APIService.serverIndex)/\(name)"
 //            } else
 //            {
 //                vc.linkManga = "https://apimanga.mangasocial.online/rmanga/\(APIService.serverIndex)/\(name)"
 //            }
-        }
+//        }
       
         self.present(vc, animated: false, completion: nil)
     }
