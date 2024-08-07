@@ -206,7 +206,7 @@ class HomeViewController: UIViewController {
         if let storedValue = UserDefaults.standard.string(forKey: "server") {
             APIService.serverIndex = storedValue
         } else {
-            APIService.serverIndex = "2"
+            APIService.serverIndex = "1"
         }
         
      
