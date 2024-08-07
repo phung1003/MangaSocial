@@ -152,7 +152,7 @@ extension AllMangaVC : UICollectionViewDelegate, UICollectionViewDataSource{
             cell.releaseDate.text = data.list_manga[indexPath.row].time_release
             cell.name.text = data.list_manga[indexPath.row].title_manga
             cell.chapter.text = "Chapter: \(data.list_manga[indexPath.row].chapter_new)"
-            cell.image.kf.setImage(with: URL(string: data.list_manga[indexPath.row].image_poster_link_goc))
+            cell.image.kf.setImage(with: URL(string: data.list_manga[indexPath.row].image_poster_link_goc), placeholder: UIImage(named: "default"))
             cell.detail.text = data.list_manga[indexPath.row].description_manga
             return cell
         }

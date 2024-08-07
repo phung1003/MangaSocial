@@ -635,7 +635,7 @@ extension readMangaVC : UICollectionViewDelegate, UICollectionViewDataSource {
                 imageMangaCLV.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
             }
             if profile.avatar_user != ""{
-                cell.Avatar.kf.setImage(with: URL(string: profile.avatar_user))
+                cell.Avatar.kf.setImage(with: URL(string: profile.avatar_user), placeholder: UIImage(named: "default"))
             }
             cell.postHandler = {[self] in
                 
@@ -666,9 +666,9 @@ extension readMangaVC : UICollectionViewDelegate, UICollectionViewDataSource {
                 cell.reply.textColor = UIColor.white
 
                 cell.time.text = commentStruct.getComment(pos: indexPath.row).time_comment
-                cell.avatar.kf.setImage(with: URL(string: commentStruct.getComment(pos: indexPath.row).avatar_user))
+                cell.avatar.kf.setImage(with: URL(string: commentStruct.getComment(pos: indexPath.row).avatar_user), placeholder: UIImage(named: "default"))
                 if profile.avatar_user != ""{
-                    cell.userAvatar.kf.setImage(with: URL(string: profile.avatar_user))
+                    cell.userAvatar.kf.setImage(with: URL(string: profile.avatar_user), placeholder: UIImage(named: "default"))
                 }
                 cell.postHandler = {[self] in
                     if APIService.userId <= 0 {
@@ -707,7 +707,7 @@ extension readMangaVC : UICollectionViewDelegate, UICollectionViewDataSource {
                     imageMangaCLV.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
                 }
                 if profile.avatar_user != ""{
-                    cell.Avatar.kf.setImage(with: URL(string: profile.avatar_user))
+                    cell.Avatar.kf.setImage(with: URL(string: profile.avatar_user), placeholder: UIImage(named: "default"))
                 }
                 cell.viewEdit(originalComment: commentStruct.getComment(pos: editIndex).content)
                 
@@ -774,9 +774,9 @@ extension readMangaVC : UICollectionViewDelegate, UICollectionViewDataSource {
             cell.comment.text = commentStruct.getComment(pos: indexPath.row).content
             cell.name.text = commentStruct.getComment(pos: indexPath.row).name_user
             cell.time.text = commentStruct.getComment(pos: indexPath.row).time_comment
-            cell.avatar.kf.setImage(with: URL(string: commentStruct.getComment(pos: indexPath.row).avatar_user))
+            cell.avatar.kf.setImage(with: URL(string: commentStruct.getComment(pos: indexPath.row).avatar_user), placeholder: UIImage(named: "default"))
             if profile.avatar_user != ""{
-                cell.avatar.kf.setImage(with: URL(string: profile.avatar_user))
+                cell.avatar.kf.setImage(with: URL(string: profile.avatar_user), placeholder: UIImage(named: "default"))
             }
             cell.replyHandler = {[self] in
                 indexSelected = indexPath.row

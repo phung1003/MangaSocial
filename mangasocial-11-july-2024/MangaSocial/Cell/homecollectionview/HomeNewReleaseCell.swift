@@ -29,7 +29,7 @@ extension HomeNewReleaseCell : UICollectionViewDelegate, UICollectionViewDataSou
         cell.rate.text = homeData.listNewRelease[indexPath.row].rate
         cell.name.text = homeData.listNewRelease[indexPath.row].title_manga
         cell.chapter.text = "Chapter: \(homeData.listNewRelease[indexPath.row].chapter_new)"
-        cell.image.kf.setImage(with: URL(string: homeData.listNewRelease[indexPath.row].image_poster_link_goc))
+        cell.image.kf.setImage(with: URL(string: homeData.listNewRelease[indexPath.row].image_poster_link_goc), placeholder: UIImage(named: "default"))
         return cell
     }
     

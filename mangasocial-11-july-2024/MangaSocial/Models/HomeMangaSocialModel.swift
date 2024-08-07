@@ -7,9 +7,11 @@
 
 
 import Foundation
+import Kingfisher
 class itemMangaModel : NSObject{
     var chapter_new : String = ""
     var image_poster_link_goc : String = ""
+    
     var rate : String = ""
     var time_release : String = ""
     var title_manga : String = ""
@@ -29,7 +31,8 @@ class itemMangaModel : NSObject{
         if let temp = json["image_poster_link_goc"] as? String { image_poster_link_goc = temp}
         else if let temp = json["manga_poster"] as? String {image_poster_link_goc = temp}
         else if let temp = json["poster_novel"] as? String {image_poster_link_goc = temp}
-
+        
+      
         
         if let temp = json["rate"] as? String { rate = temp}
         
@@ -135,6 +138,7 @@ class HomeMangaSocialModel : NSObject{
                             var itemAddData:itemMangaModel = itemMangaModel()
                             itemAddData = itemAddData.initLoad(itemData)
                             listNewRelease.append(itemAddData)
+                            
                         }
                     }
                 }
@@ -144,6 +148,7 @@ class HomeMangaSocialModel : NSObject{
                             var itemAddData:itemMangaModel = itemMangaModel()
                             itemAddData = itemAddData.initLoad(itemData)
                             listRecent.append(itemAddData)
+                            
                         }
                     }
                 }
@@ -153,6 +158,7 @@ class HomeMangaSocialModel : NSObject{
                             var itemAddData:itemMangaModel = itemMangaModel()
                             itemAddData = itemAddData.initLoad(itemData)
                             listRecommended.append(itemAddData)
+                            
                         }
                     }
                 }
@@ -162,6 +168,7 @@ class HomeMangaSocialModel : NSObject{
                             var itemAddData:itemMangaModel = itemMangaModel()
                             itemAddData = itemAddData.initLoad(itemData)
                             listCooming.append(itemAddData)
+                            
                         }
                     }
                 }
@@ -171,6 +178,7 @@ class HomeMangaSocialModel : NSObject{
                             var itemAddData:itemMangaModel = itemMangaModel()
                             itemAddData = itemAddData.initLoad(itemData)
                             listTop15.append(itemAddData)
+                            
                         }
                     }
                 }
@@ -179,8 +187,8 @@ class HomeMangaSocialModel : NSObject{
                         for itemData in dataList{
                             var itemAddData:itemMangaModel = itemMangaModel()
                             itemAddData = itemAddData.initLoad(itemData)
-                            listComedy
-                                .append(itemAddData)
+                            listComedy.append(itemAddData)
+                            
                         }
                     }
                 }
@@ -190,6 +198,7 @@ class HomeMangaSocialModel : NSObject{
                             var itemAddData:itemMangaModel = itemMangaModel()
                             itemAddData = itemAddData.initLoad(itemData)
                             listFree.append(itemAddData)
+                            
                         }
                     }
                 }
@@ -208,6 +217,7 @@ class HomeMangaSocialModel : NSObject{
                             var itemAddData:itemMangaModel = itemMangaModel()
                             itemAddData = itemAddData.initLoad(itemData)
                             listRankWeek.append(itemAddData)
+                            
                         }
                     }
                 }
@@ -217,6 +227,7 @@ class HomeMangaSocialModel : NSObject{
                             var itemAddData:itemMangaModel = itemMangaModel()
                             itemAddData = itemAddData.initLoad(itemData)
                             listRankMonth.append(itemAddData)
+                            
                         }
                     }
                 }
@@ -226,6 +237,7 @@ class HomeMangaSocialModel : NSObject{
                             var itemAddData:itemMangaModel = itemMangaModel()
                             itemAddData = itemAddData.initLoad(itemData)
                             listRankYear.append(itemAddData)
+                            
                         }
                     }
                 }

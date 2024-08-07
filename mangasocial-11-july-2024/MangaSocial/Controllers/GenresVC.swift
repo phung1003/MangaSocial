@@ -373,7 +373,7 @@ extension GenresVC : UICollectionViewDelegate, UICollectionViewDataSource {
 //        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "genresCell", for: indexPath) as! genresCell
         cell.genresName.text = genresList[indexPath.row].category_name
-        cell.genreImg.kf.setImage(with: URL(string: genresList[indexPath.row].image))
+        cell.genreImg.kf.setImage(with: URL(string: genresList[indexPath.row].image), placeholder: UIImage(named: "default"))
         cell.layer.cornerRadius = 10
         return cell
     }

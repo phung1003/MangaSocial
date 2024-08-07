@@ -44,7 +44,7 @@ class UserProfileVC: UIViewController {
             if let data2 = data {
                 DispatchQueue.main.async { [self] in
                     userProfile = data2
-                    avatar.kf.setImage(with: URL(string: data2.avatar_user))
+                    avatar.kf.setImage(with: URL(string: data2.avatar_user), placeholder: UIImage(named: "default"))
                     name.text = data2.name_user
                     keys = data2.getKey()
                     values = data2.getValue()

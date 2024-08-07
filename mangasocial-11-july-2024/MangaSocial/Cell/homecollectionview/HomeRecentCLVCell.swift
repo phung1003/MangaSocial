@@ -40,7 +40,7 @@ extension HomeRecentCLVCell : UICollectionViewDelegate, UICollectionViewDataSour
         cell.genre.text =  "Genre: \(homeData.listRecent[indexPath.row].categories)"
         cell.author.text = "Author: \(homeData.listRecent[indexPath.row].author)"
        
-        cell.image.kf.setImage(with: URL(string:  homeData.listRecent[indexPath.row].image_poster_link_goc))
+        cell.image.kf.setImage(with: URL(string:  homeData.listRecent[indexPath.row].image_poster_link_goc), placeholder: UIImage(named: "default"))
         return cell
     }
     

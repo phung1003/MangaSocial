@@ -72,7 +72,9 @@ extension Type1CLVCell : UICollectionViewDelegate, UICollectionViewDataSource{
         cell.releaseDate.text = data[indexPath.row].time_release
         cell.name.text = data[indexPath.row].title_manga
         cell.chapter.text = "Chapter: \(data[indexPath.row].chapter_new)"
-        cell.image.kf.setImage(with: URL(string: data[indexPath.row].image_poster_link_goc))
+        cell.image.kf.setImage(with: URL(string: data[indexPath.row].image_poster_link_goc), placeholder: UIImage(named: "default"))
+
+        
         cell.detail.text = data[indexPath.row].description_manga
         return cell
     }

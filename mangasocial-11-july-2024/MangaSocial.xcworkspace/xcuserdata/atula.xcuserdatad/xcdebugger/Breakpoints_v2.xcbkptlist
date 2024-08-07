@@ -1058,22 +1058,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8EB30B21-480B-4665-9B71-B27BB3B0DBA5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MangaSocial/Services/APIManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
-            landmarkName = "getHomeMangaSocial(closure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "79A0E4E8-FCCD-4420-BD9C-62C85E454B1D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1400,8 +1384,8 @@
             filePath = "MangaSocial/Controllers/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1416,8 +1400,8 @@
             filePath = "MangaSocial/Controllers/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -1892,6 +1876,21 @@
                   endingLineNumber = "828"
                   offsetFromSymbolStart = "1012">
                </Location>
+               <Location
+                  uuid = "ACC9FD2F-2D1E-4513-9E13-11B68E34E2BF - 347869f1bd01ec8e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in MangaSocial.APIService.postImage(image: Swift.String, closure: (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "829"
+                  endingLineNumber = "829"
+                  offsetFromSymbolStart = "1012">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2001,8 +2000,8 @@
             filePath = "MangaSocial/Controllers/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "513"
-            endingLineNumber = "513"
+            startingLineNumber = "537"
+            endingLineNumber = "537"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2069,6 +2068,22 @@
                   offsetFromSymbolStart = "96">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50162F3C-59A9-4D1D-AB7F-32EA93903BCD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Models/HomeMangaSocialModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "initLoad(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

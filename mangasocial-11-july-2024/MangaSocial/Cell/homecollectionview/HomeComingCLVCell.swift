@@ -30,7 +30,7 @@ extension HomeComingCLVCell : UICollectionViewDelegate, UICollectionViewDataSour
         cell.rate.text = homeData.listCooming[indexPath.row].rate
         cell.name.text = homeData.listCooming[indexPath.row].title_manga
         cell.chapter.text = "Chapter: \(homeData.listCooming[indexPath.row].chapter_new)"
-        cell.image.kf.setImage(with: URL(string: homeData.listCooming[indexPath.row].image_poster_link_goc))
+        cell.image.kf.setImage(with: URL(string: homeData.listCooming[indexPath.row].image_poster_link_goc), placeholder: UIImage(named: "default"))
         return cell
     }
     

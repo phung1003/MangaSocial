@@ -83,6 +83,29 @@ class HomeViewController: UIViewController {
         }
     }
     
+    func loadImages() {
+        var indicesToRemove = [Int]()
+        for (index, item) in homeData.listNewRelease.enumerated() {
+            KingfisherManager.shared.retrieveImage(with: URL(string: item.image_poster_link_goc)!) { result in
+                switch result {
+                case .success(_):
+                    break
+                case .failure(_):
+                    // Collect indices to remove later
+                    indicesToRemove.append(index)
+                }
+            }
+        }
+
+        // Remove items at collected indices in reverse order to avoid index out of range errors
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // Delay to ensure all requests are completed
+            indicesToRemove.sorted(by: >).forEach { index in
+                self.homeData.listNewRelease.remove(at: index)
+            }
+            self.homeCLV.reloadData()
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         hud.show(in: self.view)
         startLogin()
@@ -159,11 +182,12 @@ class HomeViewController: UIViewController {
     
         APIService.shared.getHomeMangaSocial() { [self] (response, error) in
             if let listData = response{
-                DispatchQueue.main.async {
-                    self.homeData = listData
-                    self.homeCLV.reloadData()
-                    self.getDataCheck = true
-                    self.hudDismiss()
+                DispatchQueue.main.async { [self] in
+                    homeData = listData
+                    loadImages()
+                    homeCLV.reloadData()
+                    getDataCheck = true
+                    hudDismiss()
                     print("Done Get Data")
                 }
             } else{

@@ -127,7 +127,7 @@ extension hisAbookVC : UICollectionViewDelegate, UICollectionViewDataSource{
             
             cell.name.text = historyArray[indexPath.row].title
             cell.chapter.text = historyArray[indexPath.row].chapter
-            cell.image.kf.setImage(with: URL(string: historyArray[indexPath.row].image))
+            cell.image.kf.setImage(with: URL(string: historyArray[indexPath.row].image), placeholder: UIImage(named: "default"))
             cell.timeLb.text = historyArray[indexPath.row].time
             
             let dataFilter = realm.objects(BookmarkManga.self).filter("link = %@ AND idUser == %@",historyArray[indexPath.row].link, APIService.userId).toArray(ofType: BookmarkManga.self).first
@@ -154,7 +154,7 @@ extension hisAbookVC : UICollectionViewDelegate, UICollectionViewDataSource{
             cell.name.text = bookMarkArray[indexPath.row].title
             cell.chapter.text = bookMarkArray[indexPath.row].chapter
             cell.bookmarkImage.image = UIImage(named: "receipttext 2")
-            cell.image.kf.setImage(with: URL(string: bookMarkArray[indexPath.row].image))
+            cell.image.kf.setImage(with: URL(string: bookMarkArray[indexPath.row].image), placeholder: UIImage(named: "default"))
             
             return cell
         }

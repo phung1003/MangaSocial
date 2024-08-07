@@ -28,7 +28,7 @@ extension Type2CLVCell : UICollectionViewDelegate, UICollectionViewDataSource{
         cell.rate.text = data[indexPath.row].rate
         cell.name.text = data[indexPath.row].title_manga
         cell.chapter.text = "Chapter: \(data[indexPath.row].chapter_new)"
-        cell.image.kf.setImage(with: URL(string: data[indexPath.row].image_poster_link_goc))
+        cell.image.kf.setImage(with: URL(string: data[indexPath.row].image_poster_link_goc), placeholder: UIImage(named: "default"))
         return cell
     }
     

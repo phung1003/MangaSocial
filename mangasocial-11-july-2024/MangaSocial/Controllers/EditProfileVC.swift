@@ -87,7 +87,7 @@ class EditProfileVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, 
             print("Unable to convert string to date.")
         }
         
-        avatar.kf.setImage(with: URL(string: userProfile.avatar_user))
+        avatar.kf.setImage(with: URL(string: userProfile.avatar_user), placeholder: UIImage(named: "default"))
         
         switch userProfile.gender {
         case "male":

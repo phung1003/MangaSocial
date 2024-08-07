@@ -90,7 +90,7 @@ class ProfileMenuVC: UIViewController {
                     profile = data
                     if profile.avatar_user != ""{
                         name.text = profile.name_user
-                        avatar.kf.setImage(with: URL(string: profile.avatar_user))
+                        avatar.kf.setImage(with: URL(string: profile.avatar_user), placeholder: UIImage(named: "default"))
                     }
                 }
                 

@@ -209,7 +209,7 @@ class DetailMangaVC: UIViewController {
         else {
             starRating(rating: 3.0)
         }
-        imageManga.kf.setImage(with: URL(string: detailManga.poster_manga))
+        imageManga.kf.setImage(with: URL(string: detailManga.poster_manga), placeholder: UIImage(named: "default"))
         if detailManga.r18 {
             r18Alert()
         }

@@ -318,7 +318,7 @@ extension TabVC : UICollectionViewDelegate, UICollectionViewDataSource{
             let s5 = s4.replacingOccurrences(of: "-", with: ".")
             cell.chapter.text = "Chapter \(s5)"
         }
-        cell.image.kf.setImage(with: URL(string: mangaArray[indexPath.row].image_poster_link_goc))
+        cell.image.kf.setImage(with: URL(string: mangaArray[indexPath.row].image_poster_link_goc), placeholder: UIImage(named: "default"))
         cell.timeLb.text = mangaArray[indexPath.row].time_release
       //  cell.starRating(rating: Double(mangaArray[indexPath.row].rate)!)
         cell.starRating(rating: 3.0)
