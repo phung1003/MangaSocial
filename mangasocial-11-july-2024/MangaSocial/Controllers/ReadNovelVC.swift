@@ -228,6 +228,10 @@ class ReadNovelVC: UIViewController, GADFullScreenContentDelegate {
         
        
         getComment()
+        APIService.shared.logUser(linkChapter: linkChapter, type: "novel") { response, error in
+            print(response)
+        }
+    
     }
     
     public func reload(){
@@ -242,7 +246,10 @@ class ReadNovelVC: UIViewController, GADFullScreenContentDelegate {
                 
             }
         }
-        
+        APIService.shared.logUser(linkChapter: linkChapter, type: "novel") { response, error in
+            print(response)
+        }
+    
         getComment()
     }
     

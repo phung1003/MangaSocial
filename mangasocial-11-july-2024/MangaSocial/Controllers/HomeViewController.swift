@@ -20,10 +20,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var serverCLV: UICollectionView!
     @IBOutlet weak var serverImage: UIImageView!
     @IBOutlet weak var serverBtn: UIButton!
+    
     var loginCheck = false
     var getDataCheck = false
     var modeCheck = false
+    var serverCheck = false
+    
     var homeData:HomeMangaSocialModel = HomeMangaSocialModel()
+    var serverData = [ServerModel]()
+    
     var timer : Timer?
     var currentCellIndex = 0
     var mpArray = [LastestManga]()
@@ -32,8 +37,8 @@ class HomeViewController: UIViewController {
     let hud = JGProgressHUD()
     var check = 0
     
-    var serverList: OrderedDictionary<String,String> = ["0": "mangainn.net", "1": "ww5.manganelo.tv", "2": "mangareader.cc",/* "3": "ninemanga.com",*/ "4": "bestlightnovel.com", "19": "azoranov.com", "6": "mangakomi.io" , "7": "readm.org", "8": "mangajar.com", "9": "swatmanga.com", "11": "novelhall.com", "12": "mto.to", "10": "mangajar.com", "5": "mangajar.com/manga"/*, "13": "de.ninemanga.com", "14": "br.ninemanga.com", "15": "ru.ninemanga.com", "16": "es.ninemanga.com", "17": "fr.ninemanga.com", "18": "it.ninemanga.com"*/]
-    var webServerList: OrderedDictionary<String, String> = ["1": "ww5.manganelo.tv", "2": "mangareader.cc",/* "3": "ninemanga.com",*/ "4": "bestlightnovel.com", "7": "readm.org" , "12": "mto.to"/*, "13": "de.ninemanga.com", "14": "br.ninemanga.com", "15": "ru.ninemanga.com", "16": "es.ninemanga.com", "17": "fr.ninemanga.com", "18": "it.ninemanga.com"*/]
+//    var serverList: OrderedDictionary<String,String> = ["0": "mangainn.net", "1": "ww5.manganelo.tv", "2": "mangareader.cc",/* "3": "ninemanga.com",*/ "4": "bestlightnovel.com", "19": "azoranov.com", "6": "mangakomi.io" , "7": "readm.org", "8": "mangajar.com", "9": "swatmanga.com", "11": "novelhall.com", "12": "mto.to", "10": "mangajar.com", "5": "mangajar.com/manga"/*, "13": "de.ninemanga.com", "14": "br.ninemanga.com", "15": "ru.ninemanga.com", "16": "es.ninemanga.com", "17": "fr.ninemanga.com", "18": "it.ninemanga.com"*/]
+//    var webServerList: OrderedDictionary<String, String> = ["1": "ww5.manganelo.tv", "2": "mangareader.cc",/* "3": "ninemanga.com",*/ "4": "bestlightnovel.com", "7": "readm.org" , "12": "mto.to"/*, "13": "de.ninemanga.com", "14": "br.ninemanga.com", "15": "ru.ninemanga.com", "16": "es.ninemanga.com", "17": "fr.ninemanga.com", "18": "it.ninemanga.com"*/]
     
     var screenEnterTime: Date?
 
@@ -56,7 +61,7 @@ class HomeViewController: UIViewController {
     
     func hudDismiss() {
         
-        if loginCheck && getDataCheck && modeCheck{
+        if loginCheck && getDataCheck && modeCheck && serverCheck{
             hud.dismiss()
         }
     }
@@ -74,8 +79,7 @@ class HomeViewController: UIViewController {
         APIService.shared.check() { [self]data, error in
             print(data)
             if data == "on" {
-                serverList = webServerList
-                serverCLV.reloadData()
+
             }
             self.fetchData()
             self.modeCheck = true
@@ -108,10 +112,12 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         hud.show(in: self.view)
+        loadServer()
         startLogin()
-        
     }
 
+    
+    
     fileprivate func loadAd() {
         if interstitial != nil && NetworkMonitor.adCount >= 4{
             NetworkMonitor.adCount = 0
@@ -128,6 +134,18 @@ class HomeViewController: UIViewController {
         viewConfig()
         loadAd()
         self.fetchData()
+    }
+    
+    fileprivate func loadServer() {
+        APIService.shared.getServer(closure: { [self]data, error in
+            if let data = data {
+                serverData = data
+                serverCLV.reloadData()
+            }
+            serverCheck = true
+            hudDismiss()
+
+        })
     }
     
     fileprivate func login(email: String, password: String) {
@@ -431,7 +449,7 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == serverCLV {
-            return serverList.count
+            return serverData.count
         }
         
         return 1
@@ -531,9 +549,8 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == serverCLV {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServerCell", for: indexPath) as! ServerCell
-            var keys = Array(serverList.keys)
-            cell.image.image = UIImage(named: keys[indexPath.row])
-            cell.label.text = serverList[keys[indexPath.row]]
+            cell.image.kf.setImage(with: URL(string: serverData[indexPath.row].server_image))
+            cell.label.text = serverData[indexPath.row].server_name
             return cell
         }
         
@@ -580,15 +597,14 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         if collectionView == serverCLV {
 //            serverBtn.backgroundColor = .clear
 //            serverImage.backgroundColor = .clear
-            var keys = Array(serverList.keys)
             Analytics.logEvent("choose_server", parameters: nil)
 
-            serverImage.image = UIImage(named: keys[indexPath.row])
+            serverImage.kf.setImage(with: URL(string:serverData[indexPath.row].server_image))
             serverCLV.isHidden = true
-            APIService.serverIndex = keys[indexPath.row]
+            APIService.serverIndex = serverData[indexPath.row].server_index
             hud.show(in: self.view)
             fetchData()
-            UserDefaults.standard.set(keys[indexPath.row], forKey: "server")
+            UserDefaults.standard.set(serverData[indexPath.row].server_index, forKey: "server")
 
         }
         

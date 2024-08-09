@@ -934,6 +934,66 @@ class APIService:NSObject {
         }
     }
     
+    func getServer( closure: @escaping (_ response: [ServerModel]?, _ error: Error?) -> Void){
+        requestSON("https://apimanga.mangasocial.online/all-server" , param: nil, method: .GET, loading: true, value: "") { (data, error) in
+      
+            if let data2 = data as? [[String : Any]]{
+                var returnData = [ServerModel]()
+                for item in data2 {
+                    var item2: ServerModel = ServerModel()
+                    item2 = item2.initLoad(item)
+                    returnData.append(item2)
+                }
+                closure(returnData, nil)
+               
+            }else{
+                closure(nil,error)
+            }
+        }
+    }
+    
+    func logUser(linkChapter: String, type: String, closure: @escaping (_ response: String, _ error: Error?) -> Void){
+        
+        var link = linkChapter
+        if linkChapter.hasSuffix("/") {
+            link.removeLast()
+        }
+        
+        if let manga = getSecondLastPathComponent(from: link), let chapter = URL(string: link)?.lastPathComponent {
+            let parameter = ["path_segment_manga": manga,
+                             "path_segment_chapter": chapter,
+                             "type": type,
+                             "index": APIService.serverIndex]
+            BasePost(parameter: parameter, url: "https://apimanga.mangasocial.online/log_user/\(APIService.userId)") {
+                (data, error) in
+                if let data2 = data{
+                    if let temp = data2["message"] as? String{
+                        closure(temp, nil)
+                    }
+                }else{
+                    closure("",nil)
+                }
+            }
+        }
+        
+    }
+    
+    func getHistory(closure: @escaping (_ respone: [HistoryAPIModel]?, _ error: Error?) -> Void) {
+        requestSON("https://apimanga.mangasocial.online/log_user/\(APIService.userId)", param: nil, method: .GET, loading: true, value: "") {data, error in
+            if let data = data as? [[String:Any]]{
+                var returnData = [HistoryAPIModel]()
+                for item in data {
+                    var item2 = HistoryAPIModel()
+                    item2 = item2.initLoad(item)
+                    returnData.append(item2)
+                }
+                closure(returnData, nil)
+            }
+            else {
+                closure(nil, error)
+            }
+        }
+    }
     
     
 }

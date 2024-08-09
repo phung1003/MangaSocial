@@ -46,8 +46,8 @@
             filePath = "MangaSocial/Controllers/ReadNovelVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "542"
-            endingLineNumber = "542"
+            startingLineNumber = "549"
+            endingLineNumber = "549"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "MangaSocial/Controllers/ReadNovelVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "540"
-            endingLineNumber = "540"
+            startingLineNumber = "547"
+            endingLineNumber = "547"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
             <Locations>
@@ -110,8 +110,8 @@
             filePath = "MangaSocial/Controllers/readMangaVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "640"
-            endingLineNumber = "640"
+            startingLineNumber = "648"
+            endingLineNumber = "648"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
             <Locations>
@@ -158,8 +158,8 @@
             filePath = "MangaSocial/Controllers/readMangaVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "642"
-            endingLineNumber = "642"
+            startingLineNumber = "650"
+            endingLineNumber = "650"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
             <Locations>
@@ -206,8 +206,8 @@
             filePath = "MangaSocial/Controllers/readMangaVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "716"
-            endingLineNumber = "716"
+            startingLineNumber = "724"
+            endingLineNumber = "724"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,8 +222,8 @@
             filePath = "MangaSocial/Controllers/readMangaVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "690"
-            endingLineNumber = "690"
+            startingLineNumber = "698"
+            endingLineNumber = "698"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,8 +238,8 @@
             filePath = "MangaSocial/Controllers/readMangaVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "678"
-            endingLineNumber = "678"
+            startingLineNumber = "686"
+            endingLineNumber = "686"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -318,8 +318,8 @@
             filePath = "MangaSocial/Controllers/readMangaVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
             landmarkName = "getComment()"
             landmarkType = "7">
          </BreakpointContent>
@@ -334,8 +334,8 @@
             filePath = "MangaSocial/Controllers/readMangaVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "264"
-            endingLineNumber = "264"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "getComment()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1001,8 +1001,8 @@
             filePath = "MangaSocial/Controllers/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "getMode()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1017,8 +1017,8 @@
             filePath = "MangaSocial/Controllers/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "getMode()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1384,8 +1384,8 @@
             filePath = "MangaSocial/Controllers/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1400,8 +1400,8 @@
             filePath = "MangaSocial/Controllers/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -1442,7 +1442,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CDCEEC4B-DE3C-4BE6-97AB-E38518401357"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MangaSocial/Services/APIManager.swift"
@@ -1835,7 +1835,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "ACC9FD2F-2D1E-4513-9E13-11B68E34E2BF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MangaSocial/Services/APIManager.swift"
@@ -1904,8 +1904,8 @@
             filePath = "MangaSocial/Controllers/readMangaVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "717"
-            endingLineNumber = "717"
+            startingLineNumber = "725"
+            endingLineNumber = "725"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1920,8 +1920,8 @@
             filePath = "MangaSocial/Controllers/readMangaVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "632"
-            endingLineNumber = "632"
+            startingLineNumber = "640"
+            endingLineNumber = "640"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2000,8 +2000,8 @@
             filePath = "MangaSocial/Controllers/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "537"
-            endingLineNumber = "537"
+            startingLineNumber = "554"
+            endingLineNumber = "554"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2010,7 +2010,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "061FD06D-35D2-40EC-BD98-A98855A82B8F"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MangaSocial/Services/APIManager.swift"
@@ -2099,6 +2099,485 @@
             startingLineNumber = "232"
             endingLineNumber = "232"
             landmarkName = "getHomeMangaSocial(closure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D7E3C14-374D-47B6-8E68-59019EDA10CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Controllers/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F97A7C0-AA5F-4088-B765-274085DEFCF6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Services/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
+            landmarkName = "getHomeByType(_:_:closure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE303D5E-4FD8-4CAD-BD63-E530F5165B96"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Controllers/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "getMode()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "244C237D-A26E-49A2-A68C-B4F2CAA777E5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Controllers/readMangaVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
+            landmarkName = "getComment()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB0E7654-FD70-4AED-9FD7-2FA557C138F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Services/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
+            landmarkName = "getDetailManga(link:closure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FB0E7654-FD70-4AED-9FD7-2FA557C138F6 - b179fea058ea6d44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MangaSocial.APIService.getDetailManga(link: Swift.String, closure: (Swift.Optional&lt;MangaSocial.DetailManga&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "276"
+                  endingLineNumber = "276"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "FB0E7654-FD70-4AED-9FD7-2FA557C138F6 - b179fea058ea6d44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MangaSocial.APIService.getDetailManga(link: Swift.String, closure: (Swift.Optional&lt;MangaSocial.DetailManga&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "276"
+                  endingLineNumber = "276"
+                  offsetFromSymbolStart = "632">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39BCB24F-FADC-4D67-AC17-E3E161563951"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Services/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "982"
+            endingLineNumber = "982"
+            landmarkName = "getHistory(closure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "39BCB24F-FADC-4D67-AC17-E3E161563951 - 1c5c3d1ad69f808"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MangaSocial.APIService.getHistory(closure: (Swift.Optional&lt;Swift.Array&lt;MangaSocial.HistoryAPIModel&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "981"
+                  endingLineNumber = "981"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "39BCB24F-FADC-4D67-AC17-E3E161563951 - 33ecb094edb12f76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MangaSocial.APIService.getHistory(closure: (Swift.Optional&lt;Swift.Array&lt;MangaSocial.HistoryAPIModel&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "982"
+                  endingLineNumber = "982"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61CA908F-9172-4EE6-86D1-A96C849B6F4B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Services/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "983"
+            endingLineNumber = "983"
+            landmarkName = "getHistory(closure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "61CA908F-9172-4EE6-86D1-A96C849B6F4B - 33ecb094edb12ea9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MangaSocial.APIService.getHistory(closure: (Swift.Optional&lt;Swift.Array&lt;MangaSocial.HistoryAPIModel&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "983"
+                  endingLineNumber = "983"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "61CA908F-9172-4EE6-86D1-A96C849B6F4B - 33ecb094edb12ea9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MangaSocial.APIService.getHistory(closure: (Swift.Optional&lt;Swift.Array&lt;MangaSocial.HistoryAPIModel&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "983"
+                  endingLineNumber = "983"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D923E913-BB2E-49DC-BD8A-0979C1529A0E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Services/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "969"
+            endingLineNumber = "969"
+            landmarkName = "logUser(linkChapter:type:closure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D923E913-BB2E-49DC-BD8A-0979C1529A0E - 75507aa2372b484a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MangaSocial.APIService.logUser(linkChapter: Swift.String, type: Swift.String, closure: (Swift.String, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "969"
+                  endingLineNumber = "969"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "D923E913-BB2E-49DC-BD8A-0979C1529A0E - 75507aa2372b484a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MangaSocial.APIService.logUser(linkChapter: Swift.String, type: Swift.String, closure: (Swift.String, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "969"
+                  endingLineNumber = "969"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95E6EA83-6598-4F36-9FE9-A2C140CB10C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Services/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "973"
+            endingLineNumber = "973"
+            landmarkName = "logUser(linkChapter:type:closure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "95E6EA83-6598-4F36-9FE9-A2C140CB10C7 - 75507aa2372b48ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MangaSocial.APIService.logUser(linkChapter: Swift.String, type: Swift.String, closure: (Swift.String, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "973"
+                  endingLineNumber = "973"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "95E6EA83-6598-4F36-9FE9-A2C140CB10C7 - 75507aa2372b48ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MangaSocial.APIService.logUser(linkChapter: Swift.String, type: Swift.String, closure: (Swift.String, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "973"
+                  endingLineNumber = "973"
+                  offsetFromSymbolStart = "596">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE90EC96-A8F8-4E21-A0D9-149AB19B3161"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Controllers/readMangaVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FE90EC96-A8F8-4E21-A0D9-149AB19B3161 - ee359c700cc1e80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MangaSocial.readMangaVC.fetchData() -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Controllers/readMangaVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "253"
+                  endingLineNumber = "253"
+                  offsetFromSymbolStart = "676">
+               </Location>
+               <Location
+                  uuid = "FE90EC96-A8F8-4E21-A0D9-149AB19B3161 - e29ece9027b2ca58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MangaSocial.readMangaVC.fetchData() -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Controllers/readMangaVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "254"
+                  endingLineNumber = "254"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7DE4A5EE-4126-4FC7-8993-D6FD01C6F041"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Controllers/readMangaVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "299"
+            endingLineNumber = "299"
+            landmarkName = "reload()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7DE4A5EE-4126-4FC7-8993-D6FD01C6F041 - d0451c8fb7f0e706"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MangaSocial.readMangaVC.reload() -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Controllers/readMangaVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "299"
+                  endingLineNumber = "299"
+                  offsetFromSymbolStart = "708">
+               </Location>
+               <Location
+                  uuid = "7DE4A5EE-4126-4FC7-8993-D6FD01C6F041 - 2ee4e5a44f31cfd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MangaSocial.readMangaVC.reload() -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Controllers/readMangaVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "300"
+                  endingLineNumber = "300"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B8666A3-07DF-4434-A774-71D6BD1FBBC4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Services/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "963"
+            endingLineNumber = "963"
+            landmarkName = "logUser(linkChapter:type:closure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4B8666A3-07DF-4434-A774-71D6BD1FBBC4 - cb702e7d0b00ed4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MangaSocial.APIService.logUser(linkChapter: Swift.String, type: Swift.String, closure: (Swift.String, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "963"
+                  endingLineNumber = "963"
+                  offsetFromSymbolStart = "1056">
+               </Location>
+               <Location
+                  uuid = "4B8666A3-07DF-4434-A774-71D6BD1FBBC4 - cb702e7d0b00ed4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MangaSocial.APIService.logUser(linkChapter: Swift.String, type: Swift.String, closure: (Swift.String, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "963"
+                  endingLineNumber = "963"
+                  offsetFromSymbolStart = "1116">
+               </Location>
+               <Location
+                  uuid = "4B8666A3-07DF-4434-A774-71D6BD1FBBC4 - cb702e7d0b00ed4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MangaSocial.APIService.logUser(linkChapter: Swift.String, type: Swift.String, closure: (Swift.String, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MangaSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atula/Documents/GitHub/MangaSocial/mangasocial-11-july-2024/MangaSocial/Services/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "963"
+                  endingLineNumber = "963"
+                  offsetFromSymbolStart = "1140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "236413DC-6C8C-4D8E-87B5-AAB64D7018F0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MangaSocial/Services/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "990"
+            endingLineNumber = "990"
+            landmarkName = "getHistory(closure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

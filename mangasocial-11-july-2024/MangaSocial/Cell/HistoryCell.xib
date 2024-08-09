@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HistoryCell" customModule="MangaSocial" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="487" height="58"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="487" height="58"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOc-XO-jr8">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Server" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfA-fe-fjo">
+                        <rect key="frame" x="0.0" y="37" width="54" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5w-PA-5Is">
+                        <rect key="frame" x="423.66666666666669" y="0.0" width="63.333333333333314" height="58"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lp7-uk-vKt">
+                        <rect key="frame" x="355" y="18.666666666666668" width="36" height="21.000000000000004"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <keyboardLayoutGuide key="keyboard" id="6G7-ce-MjF"/>
+            <constraints>
+                <constraint firstItem="v5w-PA-5Is" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="98R-cG-Ytd"/>
+                <constraint firstItem="lp7-uk-vKt" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Da7-kC-9Wk"/>
+                <constraint firstItem="lp7-uk-vKt" firstAttribute="leading" secondItem="YOc-XO-jr8" secondAttribute="trailing" constant="20" id="EG9-kg-lOm"/>
+                <constraint firstItem="YOc-XO-jr8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GQa-hB-e9G"/>
+                <constraint firstItem="vfA-fe-fjo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ha6-PH-CRg"/>
+                <constraint firstAttribute="bottom" secondItem="v5w-PA-5Is" secondAttribute="bottom" id="JAz-Ym-1cF"/>
+                <constraint firstItem="YOc-XO-jr8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JXb-Hh-cIN"/>
+                <constraint firstAttribute="trailing" secondItem="v5w-PA-5Is" secondAttribute="trailing" id="NeE-lk-ioU"/>
+                <constraint firstAttribute="bottom" secondItem="vfA-fe-fjo" secondAttribute="bottom" id="XDd-hQ-OAJ"/>
+                <constraint firstItem="v5w-PA-5Is" firstAttribute="leading" secondItem="lp7-uk-vKt" secondAttribute="trailing" constant="32.666666666666686" id="sCv-zd-G8t"/>
+                <constraint firstItem="v5w-PA-5Is" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.13" id="slf-7v-G6e"/>
+            </constraints>
+            <size key="customSize" width="487" height="58"/>
+            <connections>
+                <outlet property="dateLB" destination="lp7-uk-vKt" id="dtk-Pn-FHR"/>
+                <outlet property="deleteBtn" destination="v5w-PA-5Is" id="fdz-hd-WVs"/>
+                <outlet property="nameLB" destination="YOc-XO-jr8" id="mkM-IE-Kg5"/>
+                <outlet property="serverLB" destination="vfA-fe-fjo" id="DZw-Ro-M3V"/>
+            </connections>
+            <point key="canvasLocation" x="228.24427480916029" y="22.535211267605636"/>
+        </collectionViewCell>
+    </objects>
+</document>

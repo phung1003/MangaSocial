@@ -250,6 +250,9 @@ class readMangaVC: UIViewController {
             }
         }
         
+        APIService.shared.logUser(linkChapter: linkChapter, type: "manga") { response, error in
+            print(response)
+        }
     
         getComment()
         
@@ -292,6 +295,11 @@ class readMangaVC: UIViewController {
                 loadAd()
             }
         }
+        
+        APIService.shared.logUser(linkChapter: linkChapter, type: "manga") { response, error in
+            print(response)
+        }
+    
         
         getComment()
         

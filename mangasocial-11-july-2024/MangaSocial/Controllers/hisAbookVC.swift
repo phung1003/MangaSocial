@@ -22,8 +22,9 @@ class hisAbookVC: UIViewController, GADFullScreenContentDelegate {
     
     @IBOutlet weak var hisAbookCLV:UICollectionView!
     var type = ""
-    var historyArray = [HistoryManga]()
+//    var historyArray = [HistoryManga]()
     var bookMarkArray = [BookmarkManga]()
+    var historyData = [HistoryAPIModel]()
     
     var screenEnterTime: Date?
 
@@ -41,6 +42,7 @@ class hisAbookVC: UIViewController, GADFullScreenContentDelegate {
 //            return
         }
         fetchData()
+        fetchAPI()
     }
     
     fileprivate func loadAd() {
@@ -90,11 +92,22 @@ class hisAbookVC: UIViewController, GADFullScreenContentDelegate {
     
     private func fetchData(){
         lazy var realm = try! Realm()
-        historyArray = realm.objects(HistoryManga.self).filter("idUser == %@", APIService.userId).toArray(ofType: HistoryManga.self)
-        historyArray.reverse()
+//        historyArray = realm.objects(HistoryManga.self).filter("idUser == %@", APIService.userId).toArray(ofType: HistoryManga.self)
+//        historyArray.reverse()
+        
+        
         bookMarkArray = realm.objects(BookmarkManga.self).filter("idUser == %@", APIService.userId).toArray(ofType: BookmarkManga.self)
         bookMarkArray.reverse()
         hisAbookCLV.reloadData()
+    }
+    
+    func fetchAPI() {
+        APIService.shared.getHistory { [self] respone, error in
+            if let data = respone {
+                historyData = data
+                hisAbookCLV.reloadData()
+            }
+        }
     }
     
     func changeTab(text: String) {
@@ -107,7 +120,7 @@ class hisAbookVC: UIViewController, GADFullScreenContentDelegate {
 extension hisAbookVC : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if type == "history"{
-            return historyArray.count
+            return historyData.count
         }
         
         return bookMarkArray.count
@@ -125,18 +138,33 @@ extension hisAbookVC : UICollectionViewDelegate, UICollectionViewDataSource{
             cell.chapterView.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
             cell.newImage.isHidden = true
             
-            cell.name.text = historyArray[indexPath.row].title
-            cell.chapter.text = historyArray[indexPath.row].chapter
-            cell.image.kf.setImage(with: URL(string: historyArray[indexPath.row].image), placeholder: UIImage(named: "default"))
-            cell.timeLb.text = historyArray[indexPath.row].time
+//            cell.name.text = historyArray[indexPath.row].title
+//            cell.chapter.text = historyArray[indexPath.row].chapter
+//            cell.image.kf.setImage(with: URL(string: historyArray[indexPath.row].image), placeholder: UIImage(named: "default"))
+//            cell.timeLb.text = historyArray[indexPath.row].time
+//            
+//            let dataFilter = realm.objects(BookmarkManga.self).filter("link = %@ AND idUser == %@",historyArray[indexPath.row].link, APIService.userId).toArray(ofType: BookmarkManga.self).first
+//            if dataFilter != nil {
+//                cell.bookmarkImage.image = UIImage(named: "receipttext 2")
+//            }
+//            else{
+//                cell.bookmarkImage.image = UIImage(named: "receipttext")
+//            }
             
-            let dataFilter = realm.objects(BookmarkManga.self).filter("link = %@ AND idUser == %@",historyArray[indexPath.row].link, APIService.userId).toArray(ofType: BookmarkManga.self).first
+            cell.name.text = historyData[indexPath.row].title_manga
+            cell.chapter.text = historyData[indexPath.row].title_chapter
+            cell.image.kf.setImage(with: URL(string: historyData[indexPath.row].poster), placeholder: UIImage(named: "default"))
+            cell.timeLb.text = historyData[indexPath.row].readAt
+            
+            let dataFilter = realm.objects(BookmarkManga.self).filter("link = %@ AND idUser == %@",historyData[indexPath.row].link_manga, APIService.userId).toArray(ofType: BookmarkManga.self).first
+           
             if dataFilter != nil {
                 cell.bookmarkImage.image = UIImage(named: "receipttext 2")
             }
             else{
                 cell.bookmarkImage.image = UIImage(named: "receipttext")
             }
+            
             return cell
         }
         
@@ -162,10 +190,10 @@ extension hisAbookVC : UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if type == "history"{
-            let object = historyArray[indexPath.row]
+            let object = historyData[indexPath.row]
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailMangaVC") as! DetailMangaVC
             vc.modalPresentationStyle = .fullScreen
-            vc.linkManga = object.link
+            vc.linkManga = object.link_manga
             self.present(vc, animated: false, completion: nil)
         }
         else{

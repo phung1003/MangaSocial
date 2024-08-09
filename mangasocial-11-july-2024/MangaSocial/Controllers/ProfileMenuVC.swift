@@ -172,12 +172,12 @@ class ProfileMenuVC: UIViewController {
                 
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                 
-                if !APIService.webMode {
-                    if !vc.webServerList.keys.contains(APIService.serverIndex) {
-                        APIService.serverIndex = "1"
-                        UserDefaults.standard.set("1", forKey: "server")
-                    }
-                }
+//                if !APIService.webMode {
+//                    if !vc.webServerList.keys.contains(APIService.serverIndex) {
+//                        APIService.serverIndex = "1"
+//                        UserDefaults.standard.set("1", forKey: "server")
+//                    }
+//                }
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
             }
